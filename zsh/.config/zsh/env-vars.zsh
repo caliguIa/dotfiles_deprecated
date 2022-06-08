@@ -5,7 +5,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.fig/bin:$PATH"
 export PATH="$HOME/.fzf/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/dotfiles/scripts:$PATH"
 export SHELL='bin/zsh'
 export GCLOUD_CONFIG_HOME="$HOME/.config/gcloud"
 export DEV_STORAGE_SERVICE=op://dev/storage/panda-development-1af3ae8f0648.json
