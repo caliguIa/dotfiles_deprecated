@@ -32,8 +32,10 @@ gcc
 gdbm
 gdk-pixbuf
 gettext
+gh
 giflib
 git
+git-filter-repo
 glib
 glow
 gmp
