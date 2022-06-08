@@ -1,0 +1,47 @@
+add_newline = true
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[✖](bold red) "
+
+[package]
+disabled = true
+
+[username]
+disabled = true
+
+[hostname]
+ssh_only = false
+trim_at = ".companyname.com"
+disabled = false
+style = "bold italic #87A752"
+
+[directory]
+truncation_length = 10
+truncate_to_repo = true 
+style = "bold italic #87A752"
+
+[cmd_duration]
+min_time = 4
+show_milliseconds = false
+disabled = false
+style = "bold italic #87A752"
+format = "[$duration]($style) "
+
+[gcloud]
+disabled = true
+
+[rust]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[git_status] 
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[git_branch]
+symbol = ""

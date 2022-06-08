@@ -1,0 +1,35 @@
+#!/bin/zsh
+# set n to 1
+n=1
+# continue until $n  5
+while [ $n -ge 0 ]
+do
+	if    ls -d */ 2> /dev/null
+	then
+		echo Folder Detected
+		string1="/untagged/"
+		string2=".m4b"
+		string4=".log"
+		for file in *; do
+			if [ -d "$file" ]; then
+		mpthree=$(find . -maxdepth 2 -type f -name "*.mp3" | head -n 1)
+		string3=$string1$file$string2
+		string5=$string1$file$string4
+		echo Sampling $mpthree
+		bit=$(ffprobe -hide_banner -loglevel 0 -of flat -i "$mpthree" -select_streams a -show_entries format=bit_rate -of default=noprint_wrappers=1:nokey=1)
+		echo Bitrate = $bit
+		echo The folder "$file" will be merged to  "$string3"
+		echo Starting Conversion
+		docker run -it --rm -u $(id -u):$(id -g) -v ~/Downloads/torrents/complete/audiobooks/temp/mp3merge:/mnt -v ~/Downloads/torrents/complete/audiobooks/temp/untagged:/untagged m4b-tool merge "$file" -n -q --audio-bitrate="$bit" --audio-codec=libfdk_aac --jobs=6 --output-file="$string3" --logfile="$string5"
+		mv ~/Downloads/torrents/complete/audiobooks/temp/mp3merge/"$file" ~/Downloads/torrents/complete/audiobooks/temp/delete/
+		mv ~/Downloads/torrents/complete/audiobooks/temp/untagged/"$file".chapters.txt ~/Downloads/torrents/complete/audiobooks/temp/untagged/chapters
+		echo Finished Converting
+		echo Deleting duplicate mp3 audiobook folder
+		fi
+		done
+	else
+		rm -r ~/Downloads/torrents/complete/audiobooks/temp/delete/* 2> /dev/null
+		echo No folders detected, next run 5min...
+		sleep 300
+	fi
+done
