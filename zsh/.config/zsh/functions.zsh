@@ -118,12 +118,12 @@ timeshell() {
 
 bi() {
   brew install $1
-  brew list > $HOME/dotfiles/setup/brewpkg
+  brew list > $HOME/dotfiles/packages/brewpkg
 }
 
 bu() {
   brew uninstall $1
-  brew list > $HOME/dotfiles/setup/brewpkg
+  brew list > $HOME/dotfiles/packages/brewpkg
 }
 
 dka() {
