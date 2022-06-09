@@ -20,4 +20,4 @@ export SSL_LOCAL_PREFIX="$HOME/.ssl/ssl/"
 export STARSHIP_CONFIG="$HOME/dotfiles/starship/.config/starship/starship.toml"
 export VSCODE=code
 export ZDOTDIR=$HOME/.config/zsh
-
+HISTFILE=$HOME/.config/zsh/.zsh_history setopt appendhistory # some useful options (man zshoptions) setopt autocd extendedglob nomatch menucomplete setopt interactive_comments

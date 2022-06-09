@@ -35,7 +35,6 @@ gettext
 gh
 giflib
 git
-git-filter-repo
 glib
 glow
 gmp
@@ -209,7 +208,6 @@ fig
 figma
 firefox
 font-jetbrains-mono
-github
 google-chrome
 google-cloud-sdk
 grandperspective
