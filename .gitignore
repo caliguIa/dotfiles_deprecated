@@ -57,7 +57,7 @@ luac.out
 *.x86_64
 *.hex
 
-.git/.gitconfig
+.zsh_history
 
 plugin/packer_compiled.lua
 zsh/.config/zsh/plugins/
