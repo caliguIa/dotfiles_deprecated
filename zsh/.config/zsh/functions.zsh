@@ -41,7 +41,7 @@ function devlink() {
 }
 
 # create cdn url from panda-live assets url
-function prodlink() {
+function pl() {
   INPUT_URL="$1"
   SPLIT_URL="${INPUT_URL:49}"
   echo "https://assets.smartzer.com/$SPLIT_URL" | pbcopy
