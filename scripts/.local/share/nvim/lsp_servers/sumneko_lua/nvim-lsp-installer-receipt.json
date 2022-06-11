@@ -1,0 +1,1 @@
+{"metrics":{"start_time":1654962498562,"completion_time":1654962503515},"name":"sumneko_lua","secondary_sources":[],"primary_source":{"release":"v3.2.5","file":"https:\/\/github.com\/sumneko\/vscode-lua\/releases\/download\/v3.2.5\/vscode-lua-v3.2.5-darwin-arm64.vsix","type":"github_release_file","repo":"sumneko\/vscode-lua"},"schema_version":"1.0a"}

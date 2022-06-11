@@ -118,12 +118,12 @@ timeshell() {
 
 bi() {
   brew install $1
-  brew list > $HOME/dotfiles/packages/brewpkg
+  brew bundle dump --file=~/dotfiles/macos/Brewfile --force
 }
 
 bu() {
   brew uninstall $1
-  brew list > $HOME/dotfiles/packages/brewpkg
+  brew bundle dump --file=~/dotfiles/macos/Brewfile --force
 }
 
 dka() {

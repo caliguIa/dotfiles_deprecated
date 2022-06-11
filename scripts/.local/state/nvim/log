@@ -1,0 +1,3 @@
+ERR 2022-06-11T16:49:16.820 25798 libuv_process_spawn:84: uv_spawn(bin/zsh) failed: no such file or directory
+ERR 2022-06-11T16:49:17.473 25798 libuv_process_spawn:84: uv_spawn(bin/zsh) failed: no such file or directory
+WRN 2022-06-11T18:35:40.217 76174 deadly_signal:177: got signal 1 (SIGHUP)

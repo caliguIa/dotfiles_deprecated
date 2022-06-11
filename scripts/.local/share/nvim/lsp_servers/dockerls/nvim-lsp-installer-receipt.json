@@ -1,0 +1,1 @@
+{"name":"dockerls","schema_version":"1.0a","secondary_sources":[],"metrics":{"completion_time":1654968368921,"start_time":1654968366091},"primary_source":{"package":"dockerfile-language-server-nodejs","type":"npm"}}

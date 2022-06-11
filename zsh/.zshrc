@@ -1,5 +1,5 @@
+# Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # #    ___ _ ____   __________   ____ _ _ __ ___ 
 # #   / _ \ '_ \ \ / /______\ \ / / _` | '__/ __|
 # #  |  __/ | | \ V /        \ V / (_| | |  \__ \
@@ -49,4 +49,6 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
