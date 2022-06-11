@@ -62,3 +62,4 @@ alias zz='cd -'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+alias sipfix='sudo nvram boot-args=-arm64e_preview_abi'
