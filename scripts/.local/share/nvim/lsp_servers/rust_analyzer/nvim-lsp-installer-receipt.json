@@ -1,1 +1,0 @@
-{"metrics":{"start_time":1654962498861,"completion_time":1654962506361},"name":"rust_analyzer","secondary_sources":[],"primary_source":{"release":"2022-06-06","file":"https:\/\/github.com\/rust-lang\/rust-analyzer\/releases\/download\/2022-06-06\/rust-analyzer-aarch64-apple-darwin.gz","type":"github_release_file","repo":"rust-lang\/rust-analyzer"},"schema_version":"1.0a"}
