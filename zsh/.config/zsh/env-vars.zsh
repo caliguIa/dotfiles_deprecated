@@ -20,4 +20,5 @@ export SSL_LOCAL_PREFIX="$HOME/.ssl/ssl/"
 export STARSHIP_CONFIG="$HOME/dotfiles/starship/.config/starship/starship.toml"
 export VSCODE=code
 export ZDOTDIR=$HOME/.config/zsh
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 HISTFILE=$HOME/.zsh_history setopt appendhistory # some useful options (man zshoptions) setopt autocd extendedglob nomatch menucomplete setopt interactive_comments
