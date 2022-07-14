@@ -19,6 +19,13 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+
+-- No arrow keys
+keymap("n", "<up>", "<nop>", opts)
+keymap("n", "<down>", "<nop>", opts)
+keymap("n", "<left>", "<nop>", opts)
+keymap("n", "<right>", "<nop>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -40,8 +47,15 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
+
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+
+-- No arrow keys
+keymap("i", "<up>", "<nop>", opts)
+keymap("i", "<down>", "<nop>", opts)
+keymap("i", "<left>", "<nop>", opts)
+keymap("i", "<right>", "<nop>", opts)
 
 -- Visual --
 -- Stay in indent mode

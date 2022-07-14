@@ -135,3 +135,4 @@ take() {
  cd $1
 }
 
+setopt rm_star_silent

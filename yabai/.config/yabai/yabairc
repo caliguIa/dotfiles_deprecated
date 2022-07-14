@@ -2,7 +2,6 @@
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
-
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
@@ -30,10 +29,10 @@ yabai -m config window_topmost               off
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  20
+yabai -m config top_padding                  18
 yabai -m config bottom_padding               10
-yabai -m config left_padding                 6
-yabai -m config right_padding                6
+yabai -m config left_padding                 10
+yabai -m config right_padding                10
 yabai -m config window_gap                   10
 
 # Opacity
@@ -41,34 +40,35 @@ yabai -m rule --add app="Code" opacity=0.95
 yabai -m rule --add app="Slack" opacity=0.95
 
 # Float Windows
-yabai -m rule --add app="^App Store$" manage=off border=off
-yabai -m rule --add app="^ColorSlurp$" manage=off border=off
-yabai -m rule --add app="^Numi$" manage=off border=off 
-yabai -m rule --add app="^balenaEtcher$" manage=off border=off
+yabai -m rule --add app="^App Store$" manage=off 
+yabai -m rule --add app="^ColorSlurp$" manage=off
+yabai -m rule --add app="^Numi$" manage=off 
+yabai -m rule --add app="^balenaEtcher$" manage=off 
 yabai -m rule --add app="^Cron$" manage=off border=off
-yabai -m rule --add app="^Docker$" manage=off border=off
-yabai -m rule --add app="^Font Book$" manage=off border=off
+yabai -m rule --add app="^Docker$" manage=off
+yabai -m rule --add app="^Font Book$" manage=off
 yabai -m rule --add app="^IINA$" manage=off border=off
-yabai -m rule --add app="^Little Snitch$" manage=off border=off
-yabai -m rule --add app="^Minecraft$" manage=off border=off
-yabai -m rule --add app="^OBS$" manage=off border=off
-yabai -m rule --add app="^Mullvad VPN$" manage=off border=off
-yabai -m rule --add app="^System Preferences$" sticky=on manage=off border=off
-yabai -m rule --add app="^1Password 7$" sticky=on manage=off border=off
-yabai -m rule --add app="^Karabiner-Elements$" sticky=on manage=off border=off
-yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on manage=off border=off
-yabai -m rule --add app="^Finder$" sticky=on manage=off border=off
-yabai -m rule --add app="^Keka$" sticky=on manage=off border=off
-yabai -m rule --add app="^Alfred Preferences$" sticky=on manage=off border=off
-yabai -m rule --add app="^Disk Utility$" sticky=on manage=off border=off
-yabai -m rule --add app="^System Information$" sticky=on manage=off border=off
-yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off border=off
+yabai -m rule --add app="^Little Snitch$" manage=off 
+yabai -m rule --add app="^Minecraft$" manage=off 
+yabai -m rule --add app="^OBS$" manage=off 
+yabai -m rule --add app="^Mullvad VPN$" manage=off 
+yabai -m rule --add app="^System Preferences$" sticky=on manage=off 
+yabai -m rule --add app="^1Password$" sticky=on manage=off
+yabai -m rule --add app="^Karabiner-Elements$" sticky=on manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on manage=off 
+yabai -m rule --add app="^Finder$" sticky=on manage=off 
+yabai -m rule --add app="^Keka$" sticky=on manage=off 
+yabai -m rule --add app="^Alfred Preferences$" sticky=on manage=off
+yabai -m rule --add app="^Disk Utility$" sticky=on manage=off 
+yabai -m rule --add app="^System Information$" sticky=on manage=off
+yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off 
 yabai -m rule --add app="^Path Finder$" manage=off border=off
-yabai -m rule --add app="^Spotify$" manage=off border=off
+yabai -m rule --add app="^Spotify$" manage=off 
 yabai -m rule --add app="^Time Out$" manage=off border=off
 yabai -m rule --add app="^Fig$" manage=off border=off
-yabai -m rule --add app="^Spark$" manage=off border=off
-yabai -m rule --add app="^Shadow$" manage=off border=off
+yabai -m rule --add app="^Spark$" manage=off 
+yabai -m rule --add app="^Shadow$" manage=off
+yabai -m rule --add app="^TIDAL$" manage=off 
 
 # https://github.com/koekeishiya/yabai/issues/692
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
@@ -81,7 +81,14 @@ yabai -m config external_bar all:24:0
 #yabai -m config window_topmost on
 
 # only floating windows have shadow decorations
-yabai -m config window_shadow float
+yabai -m config window_shadow off
+
+# yabai -m config window_opacity on
+# yabai -m config active_window_opacity 1.0
+# yabai -m config normal_window_opacity 0.9
+
+# yabai -m signal --add event=space_changed \
+#     action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"spaces-widget\"'"
 
 # # S K E T C H Y B A R  E V E N T S
 # yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"

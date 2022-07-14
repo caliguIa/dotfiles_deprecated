@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
 # #    ___ _ ____   __________   ____ _ _ __ ___ 
 # #   / _ \ '_ \ \ / /______\ \ / / _` | '__/ __|
 # #  |  __/ | | \ V /        \ V / (_| | |  \__ \
@@ -50,5 +48,6 @@ eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+## Bun
+export BUN_INSTALL="/Users/caligula/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

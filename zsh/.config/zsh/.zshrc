@@ -1,5 +1,3 @@
-. "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # #    ___ _ ____   __________   ____ _ _ __ ___ 
 # #   / _ \ '_ \ \ / /______\ \ / / _` | '__/ __|
 # #  |  __/ | | \ V /        \ V / (_| | |  \__ \
@@ -45,9 +43,11 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 ## | .__/ \__,_|\___|_|\_\__,_|\__, |\___||___/
 ## | |                          __/ |          
 ## |_|                         |___/
-
+#
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. "$HOME/.fig/shell/zshrc.post.zsh"
 
+
+# # bun completions
+[ -s "/Users/caligula/.bun/_bun" ] && source "/Users/caligula/.bun/_bun"

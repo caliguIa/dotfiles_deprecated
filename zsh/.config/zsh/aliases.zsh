@@ -31,6 +31,7 @@ alias cat="bat"
 alias dc="docker-compose"
 alias dcu="docker-compose up"
 alias dcb="docker-compose build"
+alias desup="cd ~/smrtzr/design/local; op run -- docker-compose up;"
 alias dps="docker ps"
 alias efe="cd ~/smrtzr/editor-frontend/"
 alias efeup="cd ~/smrtzr/editor-frontend/local; op run -- docker-compose up;"
@@ -61,5 +62,5 @@ alias vi='nvim'
 alias zz='cd -'
 alias cp="cp -i"
 alias mv='mv -i'
-alias rm='rm -i'
 alias sipfix='sudo nvram boot-args=-arm64e_preview_abi'
+alias dev="cd ~/dev"
