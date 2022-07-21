@@ -25,6 +25,7 @@ keymap("n", "<up>", "<nop>", opts)
 keymap("n", "<down>", "<nop>", opts)
 keymap("n", "<left>", "<nop>", opts)
 keymap("n", "<right>", "<nop>", opts)
+--keymap("n", "C-f>", ":silent !tmux neww tmux-sessionizer<CR>")
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -48,7 +49,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 
--- Press jk fast to enter
+-- Press jk fast to exit
 keymap("i", "jk", "<ESC>", opts)
 
 -- No arrow keys

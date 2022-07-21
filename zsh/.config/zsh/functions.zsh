@@ -1,3 +1,9 @@
+# if [ "$TMUX" = "" ];
+#   then tmux; 
+# fi
+
+bindkey -s ^f "tmux-sessionizer\n"
+
 function gac () {
   git add .; git commit
 }
@@ -52,9 +58,9 @@ function pl() {
 # It assumes that the branch name is consistent across repos.
 # You should also have a clean working state i.e. commit or stash any changes
 # before calling this function, or no effect will occur on such a repo.
-refreshsmt() {
+fpsm() {
     ORIG_PWD=${PWD}
-    cd ~/smartzer/
+    cd ~/smrtzr/
     printf "UI\n"
     cd ui-components
     git fetch --all --prune
@@ -99,6 +105,11 @@ refreshsmt() {
     cd ../players
     git fetch --all --prune
     git checkout ${BRANCH:-master} || git checkout master
+    git pull
+    printf "\nDESIGN\n"
+    cd ../design
+    git fetch --all --prune
+    git checkout ${BRANCH:-build/dev} || git checkout build/dev
     git pull
     cd ${ORIG_PWD}
 }
