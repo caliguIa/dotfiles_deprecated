@@ -25,7 +25,7 @@ keymap("n", "<up>", "<nop>", opts)
 keymap("n", "<down>", "<nop>", opts)
 keymap("n", "<left>", "<nop>", opts)
 keymap("n", "<right>", "<nop>", opts)
---keymap("n", "C-f>", ":silent !tmux neww tmux-sessionizer<CR>")
+-- keymap("n", "C-f>", ":!tmux neww tmux-sessionizer<CR>")
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
