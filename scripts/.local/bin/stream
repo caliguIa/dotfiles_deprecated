@@ -1,0 +1,3 @@
+#!/bin/bash
+
+streamlink twitch.tv/$1 best --twitch-low-latency --player=/Applications/IINA.app/Contents/MacOS/iina-cli --player-args={playerinput}-stdin

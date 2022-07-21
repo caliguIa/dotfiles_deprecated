@@ -64,3 +64,5 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias sipfix='sudo nvram boot-args=-arm64e_preview_abi'
 alias dev="cd ~/dev"
+alias prim="stream theprimeagen"
+alias tj="stream teej_dv"
