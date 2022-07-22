@@ -35,9 +35,21 @@ yabai -m config left_padding                 10
 yabai -m config right_padding                10
 yabai -m config window_gap                   10
 
-# Opacity
-yabai -m rule --add app="Code" opacity=0.95
-yabai -m rule --add app="Slack" opacity=0.95
+yabai -m space 1 --label 1
+yabai -m space 2 --label 2
+yabai -m space 3 --label 3
+yabai -m space 9 --label 9
+
+# spaces
+yabai -m rule --add app="^Code$" opacity=0.95 space=1
+yabai -m rule --add app="^Brave Browser$" space=2
+yabai -m rule --add app="^kitty$" space=3
+yabai -m rule --add app="^Slack$" opacity=0.95 space=9
+
+yabai -m signal -add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
+yabai -m signal -add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Brave Browser$"
+yabai -m signal -add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"
+yabai -m signal -add event=application_launched action="yabai -m space --focus 9 &> /dev/null" app="^Slack$"
 
 # Float Windows
 yabai -m rule --add app="^App Store$" manage=off 
