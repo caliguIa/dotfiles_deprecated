@@ -66,3 +66,4 @@ alias sipfix='sudo nvram boot-args=-arm64e_preview_abi'
 alias dev="cd ~/dev"
 alias prime="stream theprimeagen"
 alias tj="stream teej_dv"
+alias t="tmux"
