@@ -55,6 +55,7 @@ alias plugins="cd ~/smrtzr/plugins/; fnm use 13"
 alias plugs="cd ~/smrtzr/plugins/; fnm use 13; op run -- npm run start"
 alias plugw="cd ~/smrtzr/plugins/; fnm use 13; op run -- npm run watch"
 alias pup="cd ~/smrtzr/player/local; op run -- docker-compose up;"
+alias uiup="cd ~/smrtzr/ui-components; op run -- npm run watch;"
 alias shell='echo $SHELL'
 alias v='nvim'
 alias vim='nvim'

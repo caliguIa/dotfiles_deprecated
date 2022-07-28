@@ -36,7 +36,7 @@ brew "midnight-commander"
 brew "mutt"
 brew "mysql-client"
 brew "neofetch"
-brew "neovim", args: ['HEAD']
+brew "neovim", args: ["HEAD"]
 brew "pipenv"
 brew "pnpm"
 brew "ripgrep"
@@ -66,11 +66,13 @@ cask "figma"
 cask "firefox"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
+cask "gimp"
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "grandperspective"
 cask "iina"
 cask "imageoptim"
+cask "inkscape"
 cask "insomnia"
 cask "karabiner-elements"
 cask "keka"
@@ -97,5 +99,7 @@ cask "utm"
 cask "via"
 cask "visual-studio-code"
 cask "wezterm"
+mas "AmorphousDiskMark", id: 1168254295
 mas "ColorSlurp", id: 1287239339
 mas "Spark", id: 1176895641
+mas "Xcode", id: 497799835
