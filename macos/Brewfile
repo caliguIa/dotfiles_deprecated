@@ -40,12 +40,14 @@ brew "neovim", args: ["HEAD"]
 brew "nicotine-plus"
 brew "pipenv"
 brew "pnpm"
+brew "procs"
 brew "ripgrep"
 brew "rust-analyzer"
 brew "starship"
 brew "stow"
 brew "streamlink"
 brew "tmux"
+brew "tokei"
 brew "tree"
 brew "wget"
 brew "yarn"
@@ -100,9 +102,7 @@ cask "utm"
 cask "via"
 cask "visual-studio-code"
 cask "wezterm"
-mas "AmorphousDiskMark", id: 1168254295
 mas "ColorSlurp", id: 1287239339
 mas "Flow", id: 1423210932
-mas "Meeter", id: 1510445899
 mas "Spark", id: 1176895641
 mas "Xcode", id: 497799835
