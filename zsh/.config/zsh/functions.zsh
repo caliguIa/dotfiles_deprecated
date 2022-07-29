@@ -40,7 +40,7 @@ function kill-apps() {
 }
 
 # create cdn url from panda-staging assets url
-function devlink() {
+function devl() {
   INPUT_URL="$1"
   SPLIT_URL="${INPUT_URL:56}"
   echo "https://assets-staging.smartzer.com/$SPLIT_URL" | pbcopy
