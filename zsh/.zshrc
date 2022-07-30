@@ -46,6 +46,7 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
+eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ## Bun
