@@ -1,0 +1,5 @@
+#!/bin/sh  
+#url=$(youtube-dl -g -f best $1)
+#iina $url
+#youtube-dl -g -f best $1 | xargs iina
+iina $1
