@@ -62,7 +62,6 @@ yabai -m rule --add app="^Font Book$" manage=off
 yabai -m rule --add app="^IINA$" border=off
 yabai -m rule --add app="^Little Snitch$" manage=off 
 yabai -m rule --add app="^Minecraft$" manage=off 
-yabai -m rule --add app="^OBS$" manage=off 
 yabai -m rule --add app="^Mullvad VPN$" manage=off 
 yabai -m rule --add app="^System Preferences$" sticky=on manage=off 
 yabai -m rule --add app="^1Password$" sticky=on manage=off
