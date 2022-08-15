@@ -249,18 +249,6 @@ sketchybar -m --add item clock_logo right --set clock_logo icon= \
   background.height=20 \
   background.padding_left=5
 
-# sketchybar -m --add item brightness right \
-#               --set brightness script="~/.config/sketchybar/plugins/brightness.sh" \
-#                                background.color=0xff3B4252 \
-#                                background.height=20 \
-#                                update_freq=1
-
-# sketchybar -m --add item brightness_logo right \
-#               --set brightness_logo icon= \
-#                                     background.color=0xffEBCB8B \
-#                                     background.height=20 \
-#                                     background.padding_left=5
-
 sketchybar -m --add item volume right \
   --set volume script="~/.config/sketchybar/plugins/volume.sh" \
   background.color=0xff3B4252 \
@@ -349,17 +337,6 @@ sketchybar -m --add item stats_logo right \
   background.color=0xffD08770 \
   background.height=20
 
-sketchybar -m --add item vpn right \
-  --set vpn script="~/.config/sketchybar/plugins/vpn.sh" \
-  background.color=0xff3B4252 \
-  background.height=20 \
-  update_freq=1
-
-sketchybar -m --add item vpn_logo right \
-  --set vpn_logo icon= \
-  background.color=0xff5E81AC \
-  background.height=20
-background.padding_left=5
 
 sketchybar -m --add item weather right \
   --set weather update_freq=21600 \
@@ -373,29 +350,6 @@ sketchybar -m --add item packages right \
   lazy=off \
   background.color=0xff3B4252 \
   background.height=20
-
-# sketchybar -m --add item messages right \
-#               --set messages update_freq=60 \
-#                              icon= \
-#                              script="~/.config/sketchybar/plugins/messages.sh" \
-#                              background.color=0xff3B4252 \
-#                              background.height=20
-
-# sketchybar -m --add alias Hammerspoon right \
-#               --set Hammerspoon background.color=0xff3B4252 \
-#                                 background.height=20
-
-# sketchybar -m --add item misc_logo right \
-#               --set misc_logo icon= \
-#                                icon.font="JetBrainsMono Nerd Font:Regular:13.0" \
-#                                background.color=0xffA3BE8C \
-#                                background.height=20
-
-# sketchybar -m --add event song_update com.apple.iTunes.playerInfo
-# sketchybar -m --add item music_info left \
-#               --set music_info script="~/.config/sketchybar/plugins/music.sh" \
-#                                click_script="~/.config/sketchybar/plugins/music_click.sh" \
-#               --subscribe music_info song_update
 
 ############## BRACKETS ##############
 sketchybar -m --add bracket primary_spaces productivity \

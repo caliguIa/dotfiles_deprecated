@@ -2,11 +2,12 @@
 
 VPN=$(mullvad status)
 
-if [[ $VPN == "Disconnected" ]]; then
-  sketchybar -m --set vpn icon= \
-                          label="Disconnected" \
+if [ "$VPN" = "Disconnected" ]; then
+  mullvad connect
+  # sketchybar -m --set net_logo icon= \
+  #   icon.color=0xff63E473
 else
-  sketchybar -m --set vpn icon= \
-                          label="Connected" \
-                          icon.color=0xffA3BE8C \
+  mullvad disconnect
+  # sketchybar -m --set net_logo icon= \
+  #   icon.color=0xffffffff
 fi
