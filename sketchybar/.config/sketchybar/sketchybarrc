@@ -271,6 +271,7 @@ sketchybar -m --add item net_logo right \
   background.color=0xffB48EAD \
   background.height=20 \
   background.padding_left=5
+  script='~/.config/sketchybar/plugins/vpn.sh'
 
 sketchybar -m --add event bluetooth_change "com.apple.bluetooth.status" \
   --add item headphones right \
