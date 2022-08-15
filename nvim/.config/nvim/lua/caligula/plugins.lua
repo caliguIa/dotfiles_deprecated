@@ -26,6 +26,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
+  print("Packer is not installed")
   return
 end
 
@@ -38,31 +39,49 @@ packer.init {
   },
 }
 
--- Install your plugins here
-return packer.startup(function(use)
-  -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "numToStr/Comment.nvim" -- Easily comment stuff
-  use "kyazdani42/nvim-tree.lua"
-  use "nvim-lualine/lualine.nvim"
+vim.cmd [[packadd packer.nvim]]
 
-  -- Colorschemes
-  use 'folke/tokyonight.nvim'
-  use "xiyaowong/nvim-transparent"
+packer.startup(function(use)
+  use 'wbthomason/packer.nvim'
+  use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+  use 'nvim-lualine/lualine.nvim' -- Statusline
+  use 'nvim-lua/plenary.nvim' -- Common utilities
+  use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'neovim/nvim-lspconfig' -- LSP
+  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
-  use 'TimUntersberger/neogit'
+  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use 'L3MON4D3/LuaSnip'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'folke/zen-mode.nvim'
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use 'akinsho/nvim-bufferline.lua'
+  -- use 'github/copilot.vim'
 
-  -- Mason LSP
-  use "williamboman/mason.nvim" 
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim' -- For git blame & browse
 
-  -- Copilot
-  use "github/copilot.vim"
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

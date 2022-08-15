@@ -1,84 +1,74 @@
-local opts = { noremap = true, silent = true }
-
-local term_opts = { silent = true }
-
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
 -- Normal --
 
+keymap.set('n', 'x', '"_x')
+
+-- Increment/decrement
+keymap.set('n', '+', '<C-a>')
+keymap.set('n', '-', '<C-x>')
+
+-- Select all
+keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- New tab
+keymap.set('n', 'te', ':tabedit')
+
 -- No arrow keys
-keymap("n", "<up>", "<nop>", opts)
-keymap("n", "<down>", "<nop>", opts)
-keymap("n", "<left>", "<nop>", opts)
-keymap("n", "<right>", "<nop>", opts)
--- keymap("n", "C-f>", ":!tmux neww tmux-sessionizer<CR>")
+keymap.set("n", "<up>", "<nop>")
+keymap.set("n", "<down>", "<nop>")
+keymap.set("n", "<left>", "<nop>")
+keymap.set("n", "<right>", "<nop>")
+keymap.set("n", "C-f>", ":!tmux neww tmux-sessionizer<CR>")
 
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap.set("n", "<C-h>", "<C-w>h")
+keymap.set("n", "<C-j>", "<C-w>j")
+keymap.set("n", "<C-k>", "<C-w>k")
+keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap.set("n", "<C-Up>", ":resize -2<CR>")
+keymap.set("n", "<C-Down>", ":resize +2<CR>")
+keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
+keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap.set("n", "<S-l>", ":bnext<CR>")
+keymap.set("n", "<S-h>", ":bprevious<CR>")
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
+keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
 
 -- Insert --
 
 -- Press jk fast to exit
-keymap("i", "jk", "<ESC>", opts)
+keymap.set("i", "jk", "<ESC>")
 
 -- No arrow keys
-keymap("i", "<up>", "<nop>", opts)
-keymap("i", "<down>", "<nop>", opts)
-keymap("i", "<left>", "<nop>", opts)
-keymap("i", "<right>", "<nop>", opts)
+keymap.set("i", "<up>", "<nop>")
+keymap.set("i", "<down>", "<nop>")
+keymap.set("i", "<left>", "<nop>")
+keymap.set("i", "<right>", "<nop>")
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+keymap.set("v", "<A-j>", ":m .+1<CR>==")
+keymap.set("v", "<A-k>", ":m .-2<CR>==")
+keymap.set("v", "p", '"_dP')
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
+keymap.set("x", "J", ":move '>+1<CR>gv-gv")
+keymap.set("x", "K", ":move '<-2<CR>gv-gv")
+keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv")
+keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv")
