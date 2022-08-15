@@ -249,12 +249,18 @@ sketchybar -m --add item stats_logo right \
                                icon.font="JetBrainsMono Nerd Font:Regular:13.0" \
                                background.color=0xffD08770 \
                                background.height=20
-
+\
 sketchybar -m --add item vpn right \
-              --set vpn icon= \
-                        icon.color=0xffA3BE8C \
-                        update_freq=5 \
-                        script="~/.config/sketchybar/plugins/vpn.sh"
+              --set vpn script="~/.config/sketchybar/plugins/vpn.sh" \
+                           background.color=0xff3B4252 \
+                           background.height=20 \
+                           update_freq=1
+\
+sketchybar -m --add item vpn_logo right \
+              --set vpn_logo icon= \
+                              background.color=0xff5E81AC \
+                              background.height=20
+                              background.padding_left=5
 
 sketchybar -m --add item weather right \
               --set weather update_freq=21600 \

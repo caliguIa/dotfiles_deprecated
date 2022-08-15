@@ -1,9 +1,12 @@
-VPN=$(scutil --nc list | grep Connected | sed -E 's/.*"(.*)".*/\1/')
+#!/usr/bin/env bash
 
-if [[ $VPN != "" ]]; then
+VPN=$(mullvad status)
+
+if [[ $VPN == "Disconnected" ]]; then
   sketchybar -m --set vpn icon= \
-                          label="$VPN" \
-                          drawing=on
+                          label="Disconnected" \
 else
-  sketchybar -m --set vpn drawing=off
+  sketchybar -m --set vpn icon= \
+                          label="Connected" \
+                          icon.color=0xffA3BE8C \
 fi
