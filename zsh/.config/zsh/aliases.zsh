@@ -70,4 +70,5 @@ alias dev="cd ~/dev"
 alias prime="stream theprimeagen"
 alias tj="stream teej_dv"
 alias t="tmux"
-alias m='mullvad'
+alias mc='mullvad connect'
+alias md='mullvad disconnect'
