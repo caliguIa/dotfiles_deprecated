@@ -72,3 +72,4 @@ alias tj="stream teej_dv"
 alias t="tmux"
 alias mc='mullvad connect'
 alias md='mullvad disconnect'
+alias nixc='nix-collect-garbage -d'
