@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+echo NPM_GITHUB_TOKEN=$(op item get npm --vault dev --fields npm_github_token) >> $HOME/.config/zsh/env-vars.local.zsh
+echo FIREBASE_API_KEY=$(op item get firebase --vault dev --fields firebase_api_key) >> $HOME/.config/zsh/env-vars.local.zsh
+echo MUX_TOKEN_ID=$(op item get mux --vault dev --fields mux_token_id) >> $HOME/.config/zsh/env-vars.local.zsh
+echo MUX_TOKEN_SECRET=$(op item get mux --vault dev --fields mux_token_secret) >> $HOME/.config/zsh/env-vars.local.zsh
+echo $(op item get storage --vault dev --fields text) > $HOME/.config/auth/panda-development-1af3ae8f0648.json 
+
