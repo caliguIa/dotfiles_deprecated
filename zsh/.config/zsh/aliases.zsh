@@ -73,3 +73,5 @@ alias t="tmux"
 alias mc='mullvad connect'
 alias md='mullvad disconnect'
 alias nixc='nix-collect-garbage -d'
+alias sms='tmuxinator start smrtzr'
+alias smp='tmuxinator start players'

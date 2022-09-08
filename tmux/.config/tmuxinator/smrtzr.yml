@@ -1,0 +1,17 @@
+# ./.tmuxinator.yml
+
+name: smrtzr
+root: ~/
+
+windows:
+  - emu: cd ~/smrtzr/emulators/docker; docker-compose up
+  - editor: cd ~/smrtzr/editor/local; docker-compose up
+  - efe: cd ~/smrtzr/editor-frontend/local; docker-compose up
+  - pfe: cd ~/smrtzr/player-frontend/local; docker-compose up
+  - pfes: cd ~/smrtzr/player-frontend/server; npm run start
+  - plugw: cd ~/smrtzr/plugins; fnm use 13; npm run watch
+  - plugs: cd ~/smrtzr/plugins; fnm use 13; npm run start
+  - design: cd ~/smrtzr/design; npm run startLocal
+  - anal: cd ~/smrtzr/analytics/local; docker-compose up
+  - ui: cd ~/smrtzr/ui-components; npm run watch
+

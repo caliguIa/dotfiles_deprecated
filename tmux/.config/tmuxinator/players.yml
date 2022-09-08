@@ -1,0 +1,8 @@
+# ./.tmuxinator.yml
+
+name: players
+root: ~/
+
+windows:
+  - watch: cd ~/smrtzr/players; npm run watch
+  - serve: cd ~/smrtzr/players; npm run serve
