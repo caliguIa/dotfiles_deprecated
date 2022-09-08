@@ -4,7 +4,7 @@
 # #   \___|_| |_|\_/          \_/ \__,_|_|  |___/
 
 source $HOME/dotfiles/zsh/.config/zsh/env-vars.zsh
-source $HOME/.config/zsh/.config/zsh/env-vars.local.zsh
+source $HOME/.config/zsh/env-vars.local.zsh
 
 # #         _ _                     
 # #        | (_)                    
