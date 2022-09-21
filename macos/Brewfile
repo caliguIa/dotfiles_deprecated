@@ -61,10 +61,12 @@ brew "spotify-tui"
 brew "starship"
 brew "stow"
 brew "streamlink"
+brew "syncthing"
 brew "tmux"
 brew "tmuxinator"
 brew "tokei"
 brew "tree"
+brew "weechat"
 brew "wget"
 brew "yarn"
 brew "youtube-dl"
@@ -117,6 +119,7 @@ cask "raycast"
 cask "shottr"
 cask "slack"
 cask "spotify"
+cask "syncthing"
 cask "tableplus"
 cask "telegram-desktop"
 cask "transmission"
@@ -129,4 +132,3 @@ mas "Dropover", id: 1355679052
 mas "Flow", id: 1423210932
 mas "Spark", id: 1176895641
 mas "Velja", id: 1607635845
-mas "Xcode", id: 497799835
