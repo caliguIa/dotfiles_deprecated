@@ -38,17 +38,22 @@ yabai -m config window_gap                   8
 yabai -m space 1 --label 1
 yabai -m space 2 --label 2
 yabai -m space 3 --label 3
+yabai -m space 4 --label 4
 yabai -m space 9 --label 9
 
 # spaces
 yabai -m rule --add app="^Code$" opacity=0.95 space=1
 yabai -m rule --add app="^Brave Browser$" space=2
+yabai -m rule --add app="^Arc$" space=2
 yabai -m rule --add app="^kitty$" space=3
+yabai -m rule --add app="^Orion$" space=4
 yabai -m rule --add app="^Slack$" opacity=0.95 space=9
 
 yabai -m signal -add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
 yabai -m signal -add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Brave Browser$"
+yabai -m signal -add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Arc$"
 yabai -m signal -add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"
+yabai -m signal -add event=application_launched action="yabai -m space --focus 4 &> /dev/null" app="^Orion$"
 yabai -m signal -add event=application_launched action="yabai -m space --focus 9 &> /dev/null" app="^Slack$"
 
 # Float Windows
