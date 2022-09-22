@@ -46,7 +46,7 @@ brew "mpv"
 brew "mutt"
 brew "mysql-client"
 brew "neofetch"
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "newsboat"
 brew "nicotine-plus"
 brew "nnn"
@@ -73,7 +73,7 @@ brew "youtube-dl"
 brew "zoxide"
 brew "felixkratz/formulae/sketchybar"
 brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 brew "planetscale/tap/pscale"
 cask "1password"
 cask "1password-cli"
@@ -130,5 +130,7 @@ cask "wezterm"
 mas "ColorSlurp", id: 1287239339
 mas "Dropover", id: 1355679052
 mas "Flow", id: 1423210932
+mas "Journey", id: 1489704689
 mas "Spark", id: 1176895641
+mas "Timepage", id: 989178902
 mas "Velja", id: 1607635845
