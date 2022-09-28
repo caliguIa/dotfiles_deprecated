@@ -33,7 +33,6 @@ brew "git"
 brew "gnupg"
 brew "go"
 brew "grep"
-brew "helix"
 brew "htop"
 brew "ifstat"
 brew "jansson"
@@ -46,7 +45,7 @@ brew "mpv"
 brew "mutt"
 brew "mysql-client"
 brew "neofetch"
-brew "neovim", args: ["HEAD"]
+brew "neovim"
 brew "newsboat"
 brew "nicotine-plus"
 brew "nnn"
@@ -73,7 +72,7 @@ brew "youtube-dl"
 brew "zoxide"
 brew "felixkratz/formulae/sketchybar"
 brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+brew "koekeishiya/formulae/yabai"
 brew "planetscale/tap/pscale"
 cask "1password"
 cask "1password-cli"
@@ -127,6 +126,8 @@ cask "utm"
 cask "via"
 cask "visual-studio-code"
 cask "wezterm"
+mas "Airmail", id: 918858936
+mas "Canary Mail", id: 1236045954
 mas "ColorSlurp", id: 1287239339
 mas "Dropover", id: 1355679052
 mas "Flow", id: 1423210932
@@ -134,3 +135,4 @@ mas "Journey", id: 1489704689
 mas "Spark", id: 1176895641
 mas "Timepage", id: 989178902
 mas "Velja", id: 1607635845
+mas "Xcode", id: 497799835

@@ -1,108 +1,101 @@
 #!/usr/bin/env sh
-sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
 
 # global settings
-yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
-yabai -m config window_placement             second_child
-yabai -m config window_opacity               off
-yabai -m config window_opacity_duration      0.0
-yabai -m config window_border                on
-yabai -m config window_border_width          5
-yabai -m config window_border_radius         25
-yabai -m config window_border_placement      exterior
-yabai -m config active_window_border_topmost on
-yabai -m config active_window_border_color   0xff775759
-yabai -m config normal_window_border_color   0x00FFFFFF
-yabai -m config insert_feedback_color        0xffd75f5f
-yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        1.0
-yabai -m config split_ratio                  0.50
-yabai -m config auto_balance                 off
-yabai -m config focus_follows_mouse          off
-yabai -m config mouse_follows_focus          off
-yabai -m config mouse_modifier               ctrl
-yabai -m config mouse_action1                move
-yabai -m config mouse_action2                resize
-yabai -m config window_topmost               off
+yabai -m config                                \
+    mouse_follows_focus          off           \
+    focus_follows_mouse          off           \
+    window_placement             second_child  \
+    window_opacity               off           \
+    window_opacity_duration      0.0           \
+    window_border                off           \
+    window_border_width          5             \
+    window_border_radius         25            \
+    active_window_border_color   0xff775759    \
+    normal_window_border_color   0x00FFFFFF    \
+    insert_feedback_color        0xffd75f5f    \
+    active_window_opacity        1.0           \
+    normal_window_opacity        1.0           \
+    split_ratio                  0.50          \
+    auto_balance                 off           \
+    focus_follows_mouse          off           \
+    mouse_follows_focus          off           \
+    mouse_modifier               ctrl          \
+    mouse_action1                move          \
+    mouse_action2                resize        \
+    window_topmost               off           \
+    layout                       bsp           \
+    top_padding                  8             \
+    bottom_padding               32            \
+    left_padding                 8             \
+    right_padding                8             \
+    window_gap                   8             \
+    window_topmost               off          \
+    window_shadow                off          \
+    window_animation_duration    0.05         \
+    window_opacity_duration      0.05         \
+    active_window_opacity        0.90         \
+    normal_window_opacity        0.80         \
+    window_opacity               on           \
+    insert_feedback_color        0xaad75f5f   \
+    active_window_border_color   0xBF775759   \
+    normal_window_border_color   0x7f353535   \
+    window_border_width          4            \
+    window_border_radius         8           \
+    window_border_blur           on           \
+    window_border_hidpi          on           \
+    window_border                off
 
-# general space settings
-yabai -m config layout                       bsp
-yabai -m config top_padding                  8
-yabai -m config bottom_padding               32
-yabai -m config left_padding                 8
-yabai -m config right_padding                8
-yabai -m config window_gap                   8
+yabai -m space 1 --label "code"
+yabai -m space 2 --label "webw"
+yabai -m space 3 --label "term"
+yabai -m space 4 --label "webp"
+yabai -m space 9 --label "slack"
 
-yabai -m space 1 --label 1
-yabai -m space 2 --label 2
-yabai -m space 3 --label 3
-yabai -m space 4 --label 4
-yabai -m space 9 --label 9
-
-# spaces
-yabai -m rule --add app="^Code$" opacity=0.95 space=1
-yabai -m rule --add app="^Brave Browser$" space=2
-yabai -m rule --add app="^Arc$" space=2
-yabai -m rule --add app="^kitty$" space=3
-yabai -m rule --add app="^Orion$" space=4
-yabai -m rule --add app="^Slack$" opacity=0.95 space=9
-
-yabai -m signal -add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
-yabai -m signal -add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Brave Browser$"
-yabai -m signal -add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Arc$"
-yabai -m signal -add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"
-yabai -m signal -add event=application_launched action="yabai -m space --focus 4 &> /dev/null" app="^Orion$"
-yabai -m signal -add event=application_launched action="yabai -m space --focus 9 &> /dev/null" app="^Slack$"
-
-# Float Windows
-yabai -m rule --add app="^App Store$" manage=off 
-yabai -m rule --add app="^ColorSlurp$" manage=off
-yabai -m rule --add app="^Numi$" manage=off 
-yabai -m rule --add app="^balenaEtcher$" manage=off 
-yabai -m rule --add app="^Cron$" manage=off border=off
-yabai -m rule --add app="^Docker$" manage=off
-yabai -m rule --add app="^Font Book$" manage=off
-yabai -m rule --add app="^IINA$" border=off
-yabai -m rule --add app="^Little Snitch$" manage=off 
-yabai -m rule --add app="^Minecraft$" manage=off 
-yabai -m rule --add app="^Mullvad VPN$" manage=off 
-yabai -m rule --add app="^System Preferences$" sticky=on manage=off 
-yabai -m rule --add app="^1Password$" sticky=on manage=off
-yabai -m rule --add app="^Karabiner-Elements$" sticky=on manage=off
-yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on manage=off 
-yabai -m rule --add app="^Finder$" sticky=on manage=off 
-yabai -m rule --add app="^Keka$" sticky=on manage=off 
-yabai -m rule --add app="^Alfred Preferences$" sticky=on manage=off
-yabai -m rule --add app="^Disk Utility$" sticky=on manage=off 
-yabai -m rule --add app="^System Information$" sticky=on manage=off
-yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off 
-yabai -m rule --add app="^Path Finder$" manage=off border=off
-yabai -m rule --add app="^Spotify$" manage=off 
-yabai -m rule --add app="^Time Out$" manage=off border=off
-yabai -m rule --add app="^Fig$" manage=off border=off
-yabai -m rule --add app="^Spark$" manage=off 
-yabai -m rule --add app="^Shadow$" manage=off
+yabai -m rule --add app="^Code$" opacity=0.95 space=1                   
+yabai -m rule --add app="^Brave Browser$" space=2                       
+yabai -m rule --add app="^Arc$" space=2                                 
+yabai -m rule --add app="^kitty$" space=3                               
+yabai -m rule --add app="^Orion$" space=4                               
+yabai -m rule --add app="^Slack$" opacity=0.95 space=9                  
+yabai -m rule --add app="^App Store$" manage=off                        
+yabai -m rule --add app="^ColorSlurp$" manage=off                       
+yabai -m rule --add app="^Numi$" manage=off                             
+yabai -m rule --add app="^balenaEtcher$" manage=off                     
+yabai -m rule --add app="^Cron$" manage=off border=off                  
+yabai -m rule --add app="^Docker$" manage=off                           
+yabai -m rule --add app="^Font Book$" manage=off                        
+yabai -m rule --add app="^IINA$" border=off                             
+yabai -m rule --add app="^Little Snitch$" manage=off                    
+yabai -m rule --add app="^Minecraft$" manage=off                        
+yabai -m rule --add app="^Mullvad VPN$" manage=off                      
+yabai -m rule --add app="^System Preferences$" sticky=on manage=off     
+yabai -m rule --add app="^1Password$" sticky=on manage=off              
+yabai -m rule --add app="^Karabiner-Elements$" sticky=on manage=off     
+yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on manage=off  
+yabai -m rule --add app="^Finder$" sticky=on manage=off                 
+yabai -m rule --add app="^Keka$" sticky=on manage=off                   
+yabai -m rule --add app="^Alfred Preferences$" sticky=on manage=off     
+yabai -m rule --add app="^Disk Utility$" sticky=on manage=off           
+yabai -m rule --add app="^System Information$" sticky=on manage=off     
+yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off       
+yabai -m rule --add app="^Path Finder$" manage=off border=off           
+yabai -m rule --add app="^Spotify$" manage=off                          
+yabai -m rule --add app="^Time Out$" manage=off border=off              
+yabai -m rule --add app="^Fig$" manage=off border=off                   
+yabai -m rule --add app="^Spark$" manage=off                            
+yabai -m rule --add app="^Shadow$" manage=off                           
 yabai -m rule --add app="^TIDAL$" manage=off 
 
-# https://github.com/koekeishiya/yabai/issues/692
-yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+yabai -m signal --add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
+yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Brave Browser$"                           
+yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Arc$"                                     
+yabai -m signal --add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"                                   
+yabai -m signal --add event=application_launched action="yabai -m space --focus 4 &> /dev/null" app="^Orion$"                                   
+yabai -m signal --add event=application_launched action="yabai -m space --focus 9 &> /dev/null" app="^Slack$"                                   
+yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"           
+yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"     
 
-# floating windows always on top
-#yabai -m config window_topmost on
-
-# only floating windows have shadow decorations
-yabai -m config window_shadow off
-
-# yabai -m config window_opacity on
-# yabai -m config active_window_opacity 1.0
-# yabai -m config normal_window_opacity 0.9
-
-# # S K E T C H Y B A R  E V E N T S
-# yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
-# yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
-# brew services restart skhd
 
 echo "yabai configuration loaded.."
