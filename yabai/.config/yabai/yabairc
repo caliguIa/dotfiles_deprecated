@@ -53,11 +53,11 @@ yabai -m space 3 --label "term"
 yabai -m space 4 --label "webp"
 yabai -m space 9 --label "slack"
 
-yabai -m rule --add app="^Code$" opacity=0.95 space=1                   
-yabai -m rule --add app="^Brave Browser$" space=2                       
-yabai -m rule --add app="^Arc$" space=2                                 
-yabai -m rule --add app="^kitty$" space=3                               
-yabai -m rule --add app="^Orion$" space=4                               
+yabai -m rule --add app="^Code$" space=1                   
+yabai -m rule --add app="^Brave Browser$" space=2 opacity=1
+yabai -m rule --add app="^Arc$" space=2 opacity=1
+yabai -m rule --add app="^kitty$" space=3                             
+yabai -m rule --add app="^Orion$" space=4 opacity=1
 yabai -m rule --add app="^Slack$" opacity=0.95 space=9                  
 yabai -m rule --add app="^App Store$" manage=off                        
 yabai -m rule --add app="^ColorSlurp$" manage=off                       
