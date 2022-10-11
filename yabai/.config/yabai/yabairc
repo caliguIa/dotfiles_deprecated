@@ -54,6 +54,7 @@ yabai -m rule --add app="^Slack$" opacity=0.95 space=9
 yabai -m rule --add app="^App Store$" manage=off                        
 yabai -m rule --add app="^ColorSlurp$" manage=off                       
 yabai -m rule --add app="^Numi$" manage=off                             
+yabai -m rule --add app="^Figma$" opacity=1
 yabai -m rule --add app="^balenaEtcher$" manage=off                     
 yabai -m rule --add app="^Cron$" manage=off border=off                  
 yabai -m rule --add app="^Docker$" manage=off                           

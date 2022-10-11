@@ -60,7 +60,7 @@ brew "spotify-tui"
 brew "starship"
 brew "stow"
 brew "streamlink"
-brew "syncthing"
+brew "syncthing", link: false
 brew "tmux"
 brew "tmuxinator"
 brew "tokei"
