@@ -15,19 +15,18 @@ yabai -m config                                \
     mouse_modifier               ctrl          \
     mouse_action1                move          \
     mouse_action2                resize        \
-    window_topmost               off           \
     layout                       bsp           \
     top_padding                  0             \
     bottom_padding               0             \
     left_padding                 0             \
     right_padding                0             \
     window_gap                   0             \
-    window_topmost               on            \
+    window_topmost               off           \
     window_shadow                off           \
     window_animation_duration    0.05          \
     window_opacity_duration      0.05          \
-    active_window_opacity        0.90          \
-    normal_window_opacity        0.80          \
+    active_window_opacity        0.92          \
+    normal_window_opacity        0.85          \
     window_opacity               on            \
     insert_feedback_color        0xaad75f5f    \
     active_window_border_color   0xBF775759    \
@@ -45,12 +44,25 @@ yabai -m space 3 --label "term"
 yabai -m space 4 --label "webp"
 yabai -m space 9 --label "slack"
 
+managed="(App Store|ColorSlurp|Numi|balenaEtcher|Cron|Docker|Font Book|Little Snitch|Minecraft|Mullvad VPN|System Preferences|1Password|Karabiner-Elements|Karabiner-EventViewer|Finder|Keka|Alfred Preferences|Disk Utility|System Information|Activity Monitor|Spotify|Shadow|Steam|TIDAL|Raycast)"
+
+bordered="(Cron|IINA)"
+
+opacityed="(Brave Browser|Arc|Orion|Figma)"
+
+stupid="(Orion|Spark)"
+
+# yabai -m rule --add app="^${stupid}$" layer=below 
+# yabai -m rule --add app="^${managed}$" manage=off
+# yabai -m rule --add app="^${bordered}$" border=off
+# yabai -m rule --add app="^${opacityed}$" opacity=1
+
 yabai -m rule --add app="^Code$" space=1                   
 yabai -m rule --add app="^Brave Browser$" space=2 opacity=1
 yabai -m rule --add app="^Arc$" space=2 opacity=1
 yabai -m rule --add app="^kitty$" space=3                             
-yabai -m rule --add app="^Orion$" space=4 opacity=1
-yabai -m rule --add app="^Slack$" opacity=0.95 space=9                  
+yabai -m rule --add app="^Orion$" space=4 opacity=1 layer=normal 
+yabai -m rule --add app="^Slack$" space=9                  
 yabai -m rule --add app="^App Store$" manage=off                        
 yabai -m rule --add app="^ColorSlurp$" manage=off                       
 yabai -m rule --add app="^Numi$" manage=off                             
@@ -63,22 +75,20 @@ yabai -m rule --add app="^IINA$" border=off
 yabai -m rule --add app="^Little Snitch$" manage=off                    
 yabai -m rule --add app="^Minecraft$" manage=off                        
 yabai -m rule --add app="^Mullvad VPN$" manage=off                      
-yabai -m rule --add app="^System Preferences$" sticky=on manage=off     
-yabai -m rule --add app="^1Password$" sticky=on manage=off              
-yabai -m rule --add app="^Karabiner-Elements$" sticky=on manage=off     
-yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on manage=off  
-yabai -m rule --add app="^Finder$" sticky=on manage=off                 
-yabai -m rule --add app="^Keka$" sticky=on manage=off                   
-yabai -m rule --add app="^Alfred Preferences$" sticky=on manage=off     
-yabai -m rule --add app="^Disk Utility$" sticky=on manage=off           
-yabai -m rule --add app="^System Information$" sticky=on manage=off     
-yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off       
-yabai -m rule --add app="^Path Finder$" manage=off border=off           
+yabai -m rule --add app="^System Preferences$" manage=off     
+yabai -m rule --add app="^1Password$" manage=off              
+yabai -m rule --add app="^Karabiner-Elements$" manage=off     
+yabai -m rule --add app="^Karabiner-EventViewer$" manage=off  
+yabai -m rule --add app="^Finder$" manage=off                 
+yabai -m rule --add app="^Keka$" manage=off                   
+yabai -m rule --add app="^Alfred Preferences$" manage=off     
+yabai -m rule --add app="^Disk Utility$" manage=off           
+yabai -m rule --add app="^System Information$" manage=off     
+yabai -m rule --add app="^Activity Monitor$" manage=off       
 yabai -m rule --add app="^Spotify$" manage=off                          
-yabai -m rule --add app="^Time Out$" manage=off border=off              
-yabai -m rule --add app="^Fig$" manage=off border=off                   
-yabai -m rule --add app="^Spark$" manage=off                            
 yabai -m rule --add app="^Shadow$" manage=off                           
+yabai -m rule --add app="^Steam$" manage=off                           
+yabai -m rule --add app="^Spark$" layer=normal
 yabai -m rule --add app="^TIDAL$" manage=off 
 
 yabai -m signal --add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
