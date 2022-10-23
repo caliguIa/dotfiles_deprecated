@@ -1,41 +1,50 @@
-aria2
-bat
-bottom
-cloudflared
-coreutils
-dust
-exa
-fd
-fish
-fnm
-fzf
-gh
-git
-git-filter-repo
-gnupg2
-go
-google-cloud-sdk
-grep
-helix
-htop
-ifstat
-jq
-lazygit
-lua
-lua-luarocks
-mas
-neofetch
-nnn
-py-ansible
-python39
-ripgrep
-ruby
-rust-analyzer
-skhd
-starship
-streamlink
-tmux
-w3m
-yabai
-yarn
-zoxide
+1password-cli                  @2.7.2          security/1password-cli
+alacritty                      @0.11.0         aqua/alacritty
+aria2                          @1.36.0         net/aria2
+bat                            @0.22.1         textproc/bat
+bottom                         @0.6.8          sysutils/bottom
+cloudflared                    @2022.9.0       net/cloudflared
+coreutils                      @9.1            sysutils/coreutils
+dbus                           @1.14.2         devel/dbus
+dust                           @0.8.3          sysutils/dust
+exa                            @0.10.1         sysutils/exa
+fd                             @8.4.0          sysutils/fd
+fish                           @3.5.1          shells/fish
+fnm                            @1.27.0         devel/fnm
+fzf                            @0.34.0         sysutils/fzf
+gh                             @2.18.1         devel/gh
+git                            @2.38.1         devel/git
+git-filter-repo                @2.38.0         devel/git-filter-repo
+gnupg2                         @2.2.40         mail/gnupg2
+go                             @1.19.2         lang/go
+google-cloud-sdk               @406.0.0        devel/google-cloud-sdk
+grep                           @3.8            sysutils/grep
+helix                          @22.08.1        editors/helix
+htop                           @3.2.1          sysutils/htop
+ifstat                         @1.1            sysutils/ifstat
+jq                             @1.6            sysutils/jq
+kitty                          @0.26.4         aqua/kitty
+lazygit                        @0.35           devel/lazygit
+lua                            @5.3.5          lang/lua
+lua-luarocks                   @3.7.0          lua/lua-luarocks
+lynx                           @2.8.9rel.1     www/lynx
+mas                            @1.8.6          sysutils/mas
+mutt                           @2.2.5          mail/mutt
+neofetch                       @7.1.0          sysutils/neofetch
+nnn                            @4.6            sysutils/nnn
+nushell                        @0.70.0         shells/nushell
+portaudio                      @20210401-147dd722 audio/portaudio
+py-ansible                     @6.0.0          python/py-ansible
+python39                       @3.9.15         lang/python39
+ripgrep                        @13.0.0         textproc/ripgrep
+ruby                           @1.8.7-p374     lang/ruby
+rust-analyzer                  @20220822       devel/rust-analyzer
+skhd                           @0.3.5          sysutils/skhd
+starship                       @1.11.0         sysutils/starship
+streamlink                     @1.7.0          multimedia/streamlink
+tmux                           @3.3a           sysutils/tmux
+w3m                            @0.5.3-38       www/w3m
+wezterm                        @20220905-102802-7d4b8249 aqua/wezterm
+yabai                          @5.0.1          sysutils/yabai
+yarn                           @1.22.19        devel/yarn
+zoxide                         @0.8.2          sysutils/zoxide

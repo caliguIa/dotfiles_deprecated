@@ -39,9 +39,8 @@ yabai -m config                                \
     external_bar                 all:0:25
 
 yabai -m space 1 --label "code"
-yabai -m space 2 --label "webw"
+yabai -m space 2 --label "web"
 yabai -m space 3 --label "term"
-yabai -m space 4 --label "webp"
 yabai -m space 9 --label "slack"
 
 managed="(App Store|ColorSlurp|Numi|balenaEtcher|Cron|Docker|Font Book|Little Snitch|Minecraft|Mullvad VPN|System Preferences|1Password|Karabiner-Elements|Karabiner-EventViewer|Finder|Keka|Alfred Preferences|Disk Utility|System Information|Activity Monitor|Spotify|Shadow|Steam|TIDAL|Raycast)"
@@ -59,9 +58,10 @@ stupid="(Orion|Spark)"
 
 yabai -m rule --add app="^Code$" space=1                   
 yabai -m rule --add app="^Brave Browser$" space=2 opacity=1
+yabai -m rule --add app="^Firefox$" space=2 opacity=1
 yabai -m rule --add app="^Arc$" space=2 opacity=1
 yabai -m rule --add app="^kitty$" space=3                             
-yabai -m rule --add app="^Orion$" space=4 opacity=1 layer=normal 
+yabai -m rule --add app="^Orion$" space=2 opacity=1 layer=normal 
 yabai -m rule --add app="^Slack$" space=9                  
 yabai -m rule --add app="^App Store$" manage=off                        
 yabai -m rule --add app="^ColorSlurp$" manage=off                       
@@ -92,10 +92,11 @@ yabai -m rule --add app="^Spark$" layer=normal
 yabai -m rule --add app="^TIDAL$" manage=off 
 
 yabai -m signal --add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
-yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Brave Browser$"                           
-yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Arc$"                                     
+yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^(Brave Browser|Arc|Firefox|Brave)$"                           
+# yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Arc$"                                     
 yabai -m signal --add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"                                   
-yabai -m signal --add event=application_launched action="yabai -m space --focus 4 &> /dev/null" app="^Orion$"                                   
+# yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Orion$"                                   
+# yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Firefox$"                                   
 yabai -m signal --add event=application_launched action="yabai -m space --focus 9 &> /dev/null" app="^Slack$"                                   
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"           
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"     
