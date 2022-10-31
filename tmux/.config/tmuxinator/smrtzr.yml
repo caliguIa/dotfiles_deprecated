@@ -11,7 +11,7 @@ windows:
   - pfes: cd ~/smrtzr/player-frontend/server; npm run start
   - plugw: cd ~/smrtzr/plugins; fnm use 13; npm run watch
   - plugs: cd ~/smrtzr/plugins; fnm use 13; npm run start
-  - design: cd ~/smrtzr/design; npm run startLocal
+  - design: cd ~/smrtzr/design; npm run dev
   - anal: cd ~/smrtzr/analytics/local; docker-compose up
   - ui: cd ~/smrtzr/ui-components; npm run watch
 
