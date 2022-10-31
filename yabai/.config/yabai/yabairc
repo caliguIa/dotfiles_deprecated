@@ -35,12 +35,13 @@ yabai -m config                                \
     window_border_radius         8             \
     window_border_blur           off           \
     window_border_hidpi          off           \
-    window_border                off           \
-    external_bar                 all:0:25
+    window_border                off           
 
 yabai -m space 1 --label "code"
 yabai -m space 2 --label "web"
 yabai -m space 3 --label "term"
+yabai -m space 4 --label "msg"
+yabai -m space 5 --label "games"
 yabai -m space 9 --label "slack"
 
 managed="(App Store|ColorSlurp|Numi|balenaEtcher|Cron|Docker|Font Book|Little Snitch|Minecraft|Mullvad VPN|System Preferences|1Password|Karabiner-Elements|Karabiner-EventViewer|Finder|Keka|Alfred Preferences|Disk Utility|System Information|Activity Monitor|Spotify|Shadow|Steam|TIDAL|Raycast)"
@@ -61,6 +62,7 @@ yabai -m rule --add app="^Brave Browser$" space=2 opacity=1
 yabai -m rule --add app="^Firefox$" space=2 opacity=1
 yabai -m rule --add app="^Arc$" space=2 opacity=1
 yabai -m rule --add app="^kitty$" space=3                             
+yabai -m rule --add app="^Telegram$" space=4                             
 yabai -m rule --add app="^Orion$" space=2 opacity=1 layer=normal 
 yabai -m rule --add app="^Slack$" space=9                  
 yabai -m rule --add app="^App Store$" manage=off                        
@@ -87,7 +89,8 @@ yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off       
 yabai -m rule --add app="^Spotify$" manage=off                          
 yabai -m rule --add app="^Shadow$" manage=off                           
-yabai -m rule --add app="^Steam$" manage=off                           
+yabai -m rule --add app="^Steam$" manage=off space=5
+yabai -m rule --add app="^NVIDIA GeForce NOW$" space=5
 yabai -m rule --add app="^Spark$" layer=normal
 yabai -m rule --add app="^TIDAL$" manage=off 
 
