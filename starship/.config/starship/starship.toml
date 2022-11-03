@@ -7,9 +7,6 @@ disabled = false
 success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
 error_symbol = "[✖](bold red) "
 
-[package]
-disabled = true
-
 [username]
 disabled = true
 
@@ -20,7 +17,7 @@ disabled = false
 style = "bold italic #87A752"
 
 [directory]
-truncation_length = 10
+truncation_length = 18
 truncate_to_repo = true 
 style = "bold italic #87A752"
 
@@ -31,17 +28,94 @@ disabled = false
 style = "bold italic #87A752"
 format = "[$duration]($style) "
 
-[gcloud]
-disabled = true
-
-[rust]
-disabled = true
-
-[nodejs]
-disabled = true
-
 [git_status] 
 format = '([\[$all_status$ahead_behind\]]($style) )'
 
 [git_branch]
 symbol = ""
+
+[gcloud]
+disabled = true
+format = ""
+symbol = ""
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+# [directory]
+# read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[meson]
+symbol = "喝 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "

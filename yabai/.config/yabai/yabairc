@@ -96,10 +96,9 @@ yabai -m rule --add app="^TIDAL$" manage=off
 
 yabai -m signal --add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
 yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^(Brave Browser|Arc|Firefox|Brave)$"                           
-# yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Arc$"                                     
 yabai -m signal --add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"                                   
-# yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Orion$"                                   
-# yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^Firefox$"                                   
+yabai -m signal --add event=application_launched action="yabai -m space --focus 4 &> /dev/null" app="^Telegram$"                                   
+yabai -m signal --add event=application_launched action="yabai -m space --focus 5 &> /dev/null" app="^(Steam|NVIDIA GeForce NOW)$"                                   
 yabai -m signal --add event=application_launched action="yabai -m space --focus 9 &> /dev/null" app="^Slack$"                                   
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"           
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"     
