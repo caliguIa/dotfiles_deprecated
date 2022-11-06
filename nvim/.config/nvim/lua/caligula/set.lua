@@ -1,14 +1,25 @@
-vim.opt.guicursor = ""
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.smartindent = true
-vim.opt.wrap = false
-vim.opt.updatetime = 50
-vim.opt.clipboard = "unnamedplus"
-vim.g.mapleader = " "
+local opt = vim.opt
+
+opt.guicursor = ''
+opt.nu = true
+opt.relativenumber = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.hlsearch = false
+opt.incsearch = true
+opt.smartindent = true
+opt.wrap = false
+opt.updatetime = 50
+opt.clipboard:append('unnamedplus')
+opt.iskeyword:append('-')
+opt.ignorecase = true
+opt.smartcase = true
+opt.termguicolors = true
+opt.background = 'dark'
+opt.signcolumn = 'yes'
+opt.backspace = 'indent,eol,start'
+opt.splitright = true
+opt.splitbelow = true
+vim.g.mapleader = ' '
