@@ -10,7 +10,6 @@ local ensure_packer = function()
   return false
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
-
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
 vim.cmd([[ 
@@ -40,9 +39,18 @@ return packer.startup(function(use)
 
   -- lsp
   use 'neovim/nvim-lspconfig'
+  use "onsails/lspkind.nvim" -- vs-code like icons for autocompletion
+
+  -- cmp
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-path'
+  use "hrsh7th/nvim-cmp"
+  --
+   -- snippets
+  use("L3MON4D3/LuaSnip") -- snippet engine
+  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+  use("rafamadriz/friendly-snippets") -- useful snippets use 'hrsh7th/nvim-cmp'
 
   -- Treeshitter
   use {
