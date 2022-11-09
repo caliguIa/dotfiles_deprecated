@@ -41,6 +41,8 @@ alias ip='curl ifconfig.io'
 alias localip="ipconfig getifaddr en0"
 alias yb='launchctl kickstart -k "gui/${UID}/org.macports.yabai"'
 alias ybcfg='vim ~/dotfiles/yabai/.config/yabai/yabairc'
+alias update='softwareupdate -ia'
+alias updatel='softwareupdate -l'
 
 ## pde
 alias t="tmux"
