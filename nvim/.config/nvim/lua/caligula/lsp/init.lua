@@ -8,6 +8,7 @@ local function config(_config)
     capabilities = capabilities,
     on_attach = function()
       nnoremap('gd', function() vim.lsp.buf.definition() end)
+      nnoremap('gr', function() vim.lsp.buf.references() end)
       nnoremap('gt', function() vim.lsp.buf.type_definition() end)
       nnoremap('gi', function() vim.lsp.buf.implementation() end)
       nnoremap('K', function() vim.lsp.buf.hover() end)
