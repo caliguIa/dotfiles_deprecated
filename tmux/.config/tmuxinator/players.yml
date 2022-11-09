@@ -4,5 +4,5 @@ name: players
 root: ~/
 
 windows:
-  - watch: cd ~/smrtzr/players; npm run watch
-  - serve: cd ~/smrtzr/players; npm run serve
+  - watch: cd ~/smrtzr_old/players; npm run watch
+  - serve: cd ~/smrtzr_old/players; npm run serve
