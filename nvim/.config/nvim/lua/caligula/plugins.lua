@@ -45,6 +45,7 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use "onsails/lspkind.nvim" -- vs-code like icons for autocompletion
   use "jose-elias-alvarez/typescript.nvim"
+  --  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 
   -- cmp
   use 'hrsh7th/cmp-nvim-lsp'
@@ -68,9 +69,16 @@ return packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
 
+  -- commenting with gc
+  use("numToStr/Comment.nvim")
+
    -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+
+  -- formatting & linting
+  use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+  use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
   -- colorschemes
   use 'gruvbox-community/gruvbox'

@@ -27,11 +27,9 @@ local function config(_config)
   }, _config or {})
 end
 
-require('lspconfig').tsserver.setup(config())
+-- require('lspconfig').tsserver.setup(config())
 
 require("lspconfig").typescript.setup(config())
-
-require('caligula.lsp.treesitter')
 
 require('lspconfig').rust_analyzer.setup(config({
 	cmd = { 'rustup', 'run', 'nightly', 'rust-analyzer' },
