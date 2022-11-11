@@ -6,7 +6,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local function config(_config)
   return vim.tbl_deep_extend('force', {
     capabilities = capabilities,
-    on_attach = function()
+    on_attach = function(client)
       nnoremap('gd', function() vim.lsp.buf.definition() end)
       nnoremap('gr', function() vim.lsp.buf.references() end)
       nnoremap('gt', function() vim.lsp.buf.type_definition() end)
@@ -18,11 +18,18 @@ local function config(_config)
       nnoremap('<leader>dk', function() vim.diagnostic.goto_prev() end)
       nnoremap('<leader>vrr', function() vim.lsp.buf.references() end)
       nnoremap('<leader>vrn', function() vim.lsp.buf.rename() end)
+      if client.name == "tsserver" then
+        nnoremap("<leader>rf", "<cmd>TypescriptRenameFile<CR>") -- rename file and update imports
+        nnoremap("<leader>oi", "<cmd>TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
+        nnoremap("<leader>ru", "<cmd>TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+      end
     end,
   }, _config or {})
 end
 
 require('lspconfig').tsserver.setup(config())
+
+require("lspconfig").typescript.setup(config())
 
 require('caligula.lsp.treesitter')
 
@@ -58,4 +65,3 @@ require('lspconfig').sumneko_lua.setup(config({
 		},
 	},
 }))
-

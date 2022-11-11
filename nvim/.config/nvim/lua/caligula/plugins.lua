@@ -37,16 +37,21 @@ return packer.startup(function(use)
 
   use 'nvim-lualine/lualine.nvim'
 
+  -- fuzzy finding w/ telescope
+  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+
   -- lsp
   use 'neovim/nvim-lspconfig'
   use "onsails/lspkind.nvim" -- vs-code like icons for autocompletion
+  use "jose-elias-alvarez/typescript.nvim"
 
   -- cmp
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use "hrsh7th/nvim-cmp"
-  --
+
    -- snippets
   use("L3MON4D3/LuaSnip") -- snippet engine
   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
