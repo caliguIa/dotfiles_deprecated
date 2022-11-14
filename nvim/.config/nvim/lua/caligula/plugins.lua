@@ -67,6 +67,8 @@ return packer.startup(function(use)
       end,
   }
 
+  -- git
+  use 'TimUntersberger/neogit'
   use 'lewis6991/gitsigns.nvim'
 
   -- commenting with gc

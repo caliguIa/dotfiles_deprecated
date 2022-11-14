@@ -33,14 +33,19 @@ alias dcu="docker-compose up"
 alias dcb="docker-compose build"
 alias dps="docker ps"
 
+## dotfiles
+alias ybcfg='vim ~/dotfiles/yabai/.config/yabai/yabairc'
+alias yb='launchctl kickstart -k "gui/${UID}/org.macports.yabai"'
+alias nvimcfg='vim ~/dotfiles/nvim/.config/nvim/'
+alias aliases='vim ~/dotfiles/zsh/.config/zsh/aliases.zsh'
+alias envars='vim ~/dotfiles/zsh/.config/zsh/env-vars.zsh'
+
 ## scripts
 alias bsc="springcleaning.sh"
 alias dfp='dotfilespush.sh'
 alias appclean='app-cleaner.sh'
 alias ip='curl ifconfig.io'
 alias localip="ipconfig getifaddr en0"
-alias yb='launchctl kickstart -k "gui/${UID}/org.macports.yabai"'
-alias ybcfg='vim ~/dotfiles/yabai/.config/yabai/yabairc'
 alias update='softwareupdate -ia'
 alias updatel='softwareupdate -l'
 
