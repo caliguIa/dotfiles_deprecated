@@ -27,7 +27,7 @@ local function config(_config)
   }, _config or {})
 end
 
--- require('lspconfig').tsserver.setup(config())
+require('lspconfig').tsserver.setup(config())
 
 require("lspconfig").typescript.setup(config())
 

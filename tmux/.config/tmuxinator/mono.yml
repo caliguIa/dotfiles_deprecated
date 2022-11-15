@@ -7,6 +7,3 @@ windows:
   - emu: cd ~/smrtzr/emulators/docker; docker-compose up
   - editor: cd ~/smrtzr_old/editor/local; docker-compose up
   - core: cd ~/smrtzr/; yarn core
-  - plugw: cd ~/smrtzr/apps/frontend/js/plugins/; yarn watch
-  - plugs: cd ~/smrtzr/apps/frontend/js/plugins/; yarn start 
-
