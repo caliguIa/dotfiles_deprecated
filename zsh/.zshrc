@@ -53,3 +53,5 @@ eval "$(zoxide init zsh)"
 ## Bun
 export BUN_INSTALL="/Users/caligula/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -s "/Users/caligula/.jabba/jabba.sh" ] && source "/Users/caligula/.jabba/jabba.sh"
