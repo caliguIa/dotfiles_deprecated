@@ -35,7 +35,7 @@ alias dps="docker ps"
 
 ## dotfiles
 alias ybcfg='vim ~/dotfiles/yabai/.config/yabai/yabairc'
-alias yb='launchctl kickstart -k "gui/${UID}/org.macports.yabai"'
+alias yb='launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"'
 alias nvimcfg='vim ~/dotfiles/nvim/.config/nvim/'
 alias aliases='vim ~/dotfiles/zsh/.config/zsh/aliases.zsh'
 alias envars='vim ~/dotfiles/zsh/.config/zsh/env-vars.zsh'
