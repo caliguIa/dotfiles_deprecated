@@ -53,3 +53,4 @@ eval "$(zoxide init zsh)"
 
 # # bun completions
 [ -s "/Users/caligula/.bun/_bun" ] && source "/Users/caligula/.bun/_bun"
+[ -s "/Users/caligula/.jabba/jabba.sh" ] && source "/Users/caligula/.jabba/jabba.sh"
