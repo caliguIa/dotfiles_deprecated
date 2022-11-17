@@ -1,9 +1,13 @@
 # ./.tmuxinator.yml
 
 name: mono
-root: ~/smrtzr/
+root: ~/smrtzr/smrtzr/
 
 windows:
-  - emu: cd ~/smrtzr/smrtzr/emulators/docker; docker-compose up
-  - editor: cd ~/smrtzr/editor; ./gradlew run
-  - core: cd ~/smrtzr/smrtzr; yarn core
+  - vim: nvim . 
+  - services:
+      layout: main-vertical
+      panes:
+        - yarn core
+        - cd ~/smrtzr/editor; ./gradlew run
+        - cd emulators/docker; docker-compose up

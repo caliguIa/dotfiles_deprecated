@@ -1,8 +1,12 @@
 # ./.tmuxinator.yml
 
 name: players
-root: ~/
+root: ~/smrtzr/players/
 
 windows:
-  - watch: cd ~/smrtzr/players; npm run watch
-  - serve: cd ~/smrtzr/players; npm run serve
+  - players: nvim .
+  - services:
+      layout: even-horizontal
+      panes:
+        - npm run watch
+        - npm run serve
