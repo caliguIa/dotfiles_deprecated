@@ -60,31 +60,13 @@ alias vi='nvim'
 ## smrtzr 
 alias gccal='gcloud config configurations activate cal'
 alias gcsmrt='gcloud config configurations activate smrtzr'
-alias sms='tmuxinator start smrtzr'
 alias smp='tmuxinator start players'
 alias mono='tmuxinator start mono'
-alias smrt='cd ~/smrtzr/'
-alias analup="cd ~/smrtzr_old/analytics/local; docker-compose up;"
-alias desup="cd ~/smrtzr_old/design; npm run dev" 
-alias efe="cd ~/smrtzr_old/editor-frontend/"
-alias efeup="cd ~/smrtzr_old/editor-frontend/local; docker-compose up;"
-alias emup="cd ~/smrtzr_old/emulators/docker; docker-compose up -d;"
-alias eup="cd ~/smrtzr_old/editor/local; docker-compose up;"
-alias pfe="cd ~/smrtzr_old/player-frontend/"
-alias pfeup="cd ~/smrtzr_old/player-frontend/local; docker-compose up;"
-alias pfes="cd ~/smrtzr_old/player-frontend/server; npm run start;"
-alias pjs='cd ~/smrtzr_old/packages-js/'
-alias players="cd ~/smrtzr_old/players/"
-alias playw="cd ~/smrtzr_old/players/; npm run watch"
-alias plays="cd ~/smrtzr_old/players/; npm run serve"
-alias plugins="cd ~/smrtzr_old/plugins/; fnm use 13"
-alias plugs="cd ~/smrtzr_old/plugins/; fnm use 13; npm run start"
-alias plugw="cd ~/smrtzr_old/plugins/; fnm use 13; npm run watch"
-alias pup="cd ~/smrtzr_old/player/local; docker-compose up;"
-alias uiup="cd ~/smrtzr_old/ui-components; npm run watch;"
-alias shell='echo $SHELL'
+alias smrtzr='cd ~/smrtzr/'
+alias players="cd ~/smrtzr/players/"
 
 ## misc
+alias shell='echo $SHELL'
 alias python=python3
 alias pip=pip3
 alias jeeves="ssh root@ssh.jeeves.pw"

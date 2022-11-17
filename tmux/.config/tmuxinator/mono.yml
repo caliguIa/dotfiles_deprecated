@@ -4,6 +4,6 @@ name: mono
 root: ~/smrtzr/
 
 windows:
-  - emu: cd ~/smrtzr/emulators/docker; docker-compose up
-  - editor: cd ~/smrtzr_old/editor/local; docker-compose up
-  - core: cd ~/smrtzr/; yarn core
+  - emu: cd ~/smrtzr/smrtzr/emulators/docker; docker-compose up
+  - editor: cd ~/smrtzr/editor; ./gradlew run
+  - core: cd ~/smrtzr/smrtzr; yarn core
