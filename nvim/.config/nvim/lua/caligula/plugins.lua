@@ -12,7 +12,7 @@ end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins.lua source <afile> | PackerSync
@@ -31,6 +31,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'nvim-lua/plenary.nvim'
+  use "nvim-lua/popup.nvim"
 
   -- reduce startup time by caching lua modules
   use 'lewis6991/impatient.nvim'
@@ -83,7 +84,8 @@ return packer.startup(function(use)
   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
   -- copilot
-  use 'github/copilot.vim'
+  -- use 'github/copilot.vim'
+  use ("zbirenbaum/copilot.lua")
 
   -- colorschemes
   use 'gruvbox-community/gruvbox'

@@ -1,7 +1,12 @@
 local Remap = require('caligula.keymap')
 local nnoremap = Remap.nnoremap
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local cmp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_status then
+  return
+end
+
+local capabilities = cmp_nvim_lsp.default_capabilities()
 
 local function config(_config)
   return vim.tbl_deep_extend('force', {
@@ -30,6 +35,8 @@ end
 require('lspconfig').tsserver.setup(config())
 
 require("lspconfig").typescript.setup(config())
+
+require("lspconfig").cssls.setup(config())
 
 require('lspconfig').rust_analyzer.setup(config({
 	cmd = { 'rustup', 'run', 'nightly', 'rust-analyzer' },
