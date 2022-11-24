@@ -1,13 +1,13 @@
 -- auto install packer if not installed
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd([[packadd packer.nvim]])
-    return true
-  end
-  return false
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		vim.cmd([[packadd packer.nvim]])
+		return true
+	end
+	return false
 end
 local packer_bootstrap = ensure_packer() -- true if packer was just installed
 -- autocommand that reloads neovim and installs/updates/removes plugins
@@ -20,80 +20,84 @@ vim.cmd([[
 ]])
 
 -- import packer safely
-local status, packer = pcall(require, 'packer')
+local status, packer = pcall(require, "packer")
 if not status then
-  return
+	return
 end
 
-vim.cmd [[packadd packer.nvim]]
+vim.cmd([[packadd packer.nvim]])
 
 return packer.startup(function(use)
-  use 'wbthomason/packer.nvim'
+	use("wbthomason/packer.nvim")
 
-  use 'nvim-lua/plenary.nvim'
-  use "nvim-lua/popup.nvim"
+	use("nvim-lua/plenary.nvim")
+	use("nvim-lua/popup.nvim")
 
-  -- reduce startup time by caching lua modules
-  use 'lewis6991/impatient.nvim'
+	-- reduce startup time by caching lua modules
+	use("lewis6991/impatient.nvim")
 
-  use 'nvim-lualine/lualine.nvim'
+	use("nvim-lualine/lualine.nvim")
 
-  -- fuzzy finding w/ telescope
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
-  use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+	-- fuzzy finding w/ telescope
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
-  -- lsp
-  use 'neovim/nvim-lspconfig'
-  use "onsails/lspkind.nvim" -- vs-code like icons for autocompletion
-  use "jose-elias-alvarez/typescript.nvim"
-  --  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	-- managing & installing lsp servers, linters & formatters
+	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
+	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
 
-  -- cmp
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use "hrsh7th/nvim-cmp"
+	-- lsp
+	use("neovim/nvim-lspconfig")
+	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use("jose-elias-alvarez/typescript.nvim")
+	--  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 
-   -- snippets
-  use("L3MON4D3/LuaSnip") -- snippet engine
-  use("saadparwaiz1/cmp_luasnip") -- for autocompletion
-  use("rafamadriz/friendly-snippets") -- useful snippets use 'hrsh7th/nvim-cmp'
+	-- cmp
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/nvim-cmp")
 
-  -- Treeshitter
-  use {
-      'nvim-treesitter/nvim-treesitter',
-      run = function()
-          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-          ts_update()
-      end,
-  }
+	-- snippets
+	use("L3MON4D3/LuaSnip") -- snippet engine
+	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+	use("rafamadriz/friendly-snippets") -- useful snippets use 'hrsh7th/nvim-cmp'
 
-  -- git
-  use 'TimUntersberger/neogit'
-  use 'lewis6991/gitsigns.nvim'
+	-- Treeshitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
 
-  -- commenting with gc
-  use("numToStr/Comment.nvim")
+	-- git
+	use("TimUntersberger/neogit")
+	use("lewis6991/gitsigns.nvim")
 
-   -- auto closing
-  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
-  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+	-- commenting with gc
+	use("numToStr/Comment.nvim")
 
-  -- formatting & linting
-  use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-  use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	-- auto closing
+	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
-  -- copilot
-  -- use 'github/copilot.vim'
-  use ("zbirenbaum/copilot.lua")
+	-- formatting & linting
+	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
-  -- colorschemes
-  use 'gruvbox-community/gruvbox'
-  use 'folke/tokyonight.nvim'
-  use({ 'catppuccin/nvim', as = 'catppuccin' })
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
+	-- copilot
+	-- use 'github/copilot.vim'
+	use("zbirenbaum/copilot.lua")
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+	-- colorschemes
+	use("gruvbox-community/gruvbox")
+	use("folke/tokyonight.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "rose-pine/neovim", as = "rose-pine" })
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)
