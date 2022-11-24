@@ -60,6 +60,7 @@ stupid="(Orion|Spark)"
 yabai -m rule --add app="^Code$" space=1                   
 yabai -m rule --add app="^Brave Browser$" space=2 opacity=1
 yabai -m rule --add app="^Firefox$" space=2 opacity=1
+yabai -m rule --add app="^Google Chrome$" space=2 opacity=1
 yabai -m rule --add app="^Arc$" space=2 opacity=1
 yabai -m rule --add app="^kitty$" space=3                             
 yabai -m rule --add app="^Telegram$" space=4                             
@@ -95,7 +96,7 @@ yabai -m rule --add app="^Spark$" layer=normal
 yabai -m rule --add app="^TIDAL$" manage=off 
 
 yabai -m signal --add event=application_launched action="yabai -m space --focus 1 &> /dev/null" app="^Code$"
-yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^(Brave Browser|Arc|Firefox|Brave)$"                           
+yabai -m signal --add event=application_launched action="yabai -m space --focus 2 &> /dev/null" app="^(Brave Browser|Arc|Firefox|Brave|Google Chrome)$"                           
 yabai -m signal --add event=application_launched action="yabai -m space --focus 3 &> /dev/null" app="^kitty$"                                   
 yabai -m signal --add event=application_launched action="yabai -m space --focus 4 &> /dev/null" app="^Telegram$"                                   
 yabai -m signal --add event=application_launched action="yabai -m space --focus 5 &> /dev/null" app="^(Steam|NVIDIA GeForce NOW)$"                                   
