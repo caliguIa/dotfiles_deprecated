@@ -50,7 +50,7 @@ alias update='softwareupdate -ia'
 alias updatel='softwareupdate -l'
 
 ## pde
-alias t="tmux"
+alias t="tmux attach || tmux new"
 alias tks="tmux kill-server"
 alias i='npm i'
 alias v='nvim'
