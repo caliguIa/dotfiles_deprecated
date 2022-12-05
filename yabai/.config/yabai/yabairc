@@ -64,6 +64,8 @@ yabai -m rule --add app="^Google Chrome$" space=2 opacity=1
 yabai -m rule --add app="^Arc$" space=2 opacity=1
 yabai -m rule --add app="^kitty$" space=3                             
 yabai -m rule --add app="^Telegram$" space=4                             
+yabai -m rule --add app="^Ryujinx$" opacity=1 manage=off                            
+yabai -m rule --add app="^Cemu$" opacity=1 manage=off                            
 yabai -m rule --add app="^Orion$" space=2 opacity=1 layer=normal 
 yabai -m rule --add app="^Slack$" space=9                  
 yabai -m rule --add app="^App Store$" manage=off                        
