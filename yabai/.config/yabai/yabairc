@@ -58,19 +58,20 @@ stupid="(Orion|Spark)"
 # yabai -m rule --add app="^${opacityed}$" opacity=1
 
 yabai -m rule --add app="^Code$" space=1                   
-yabai -m rule --add app="^Brave Browser$" space=2 opacity=1
+yabai -m rule --add app="^Brave Browser$" opacity=1
 yabai -m rule --add app="^Firefox$" space=2 opacity=1
-yabai -m rule --add app="^Google Chrome$" space=2 opacity=1
-yabai -m rule --add app="^Safari$" space=2 opacity=1
+yabai -m rule --add app="^Google Chrome$" opacity=1
+yabai -m rule --add app="^Safari$" opacity=1
+yabai -m rule --add app="^Safari Technology Preview$" opacity=1
 yabai -m rule --add app="^Adobe Lightroom$" space=5 opacity=1
 yabai -m rule --add app="^Adobe Lightroom Classic$" space=5 opacity=1
 yabai -m rule --add app="^Adobe Photoshop$" space=5 opacity=1
-yabai -m rule --add app="^Arc$" space=2 opacity=1
+yabai -m rule --add app="^Arc$" opacity=1
 yabai -m rule --add app="^kitty$" space=3                             
 yabai -m rule --add app="^Telegram$" space=4                             
 yabai -m rule --add app="^Ryujinx$" opacity=1 manage=off                            
 yabai -m rule --add app="^Cemu$" opacity=1 manage=off                            
-yabai -m rule --add app="^Orion$" space=2 opacity=1 layer=normal 
+yabai -m rule --add app="^Orion$" opacity=1 layer=normal 
 yabai -m rule --add app="^Slack$" space=9                  
 yabai -m rule --add app="^App Store$" manage=off                        
 yabai -m rule --add app="^ColorSlurp$" manage=off                       
