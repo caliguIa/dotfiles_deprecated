@@ -58,21 +58,11 @@ function pl() {
 # It assumes that the branch name is consistent across repos.
 # You should also have a clean working state i.e. commit or stash any changes
 # before calling this function, or no effect will occur on such a repo.
-fpsm() {
+sdev() {
     ORIG_PWD=${PWD}
     cd ~/smrtzr/
-    printf "UI\n"
-    cd ui-components
-    git fetch --all --prune
-    git checkout ${BRANCH:-master} || git checkout master
-    git pull
-    printf "\nPLAYER\n"
-    cd ../player
-    git fetch --all --prune
-    git checkout ${BRANCH:-build/dev} || git checkout build/dev
-    git pull
-    printf "\nPLAYER-FRONTEND\n"
-    cd ../player-frontend
+    printf "\nMONO\n"
+    cd ./smrtzr
     git fetch --all --prune
     git checkout ${BRANCH:-build/dev} || git checkout build/dev
     git pull
@@ -80,21 +70,6 @@ fpsm() {
     cd ../editor
     git fetch --all --prune
     git checkout ${BRANCH:-build/dev} || git checkout build/dev
-    git pull
-    printf "\nEDITOR-FRONTEND\n"
-    cd ../editor-frontend
-    git fetch --all --prune
-    git checkout ${BRANCH:-build/dev} || git checkout build/dev
-    git pull
-    printf "\nPLUGINS\n"
-    cd ../plugins
-    git fetch --all --prune
-    git checkout ${BRANCH:-build/dev} || git checkout build/dev
-    git pull
-    printf "\nPACKAGES-JS\n"
-    cd ../packages-js
-    git fetch --all --prune
-    git checkout ${BRANCH:-dev} || git checkout dev
     git pull
     printf "\nPACKAGES-JAVA\n"
     cd ../packages-java
@@ -106,10 +81,23 @@ fpsm() {
     git fetch --all --prune
     git checkout ${BRANCH:-master} || git checkout master
     git pull
-    printf "\nDESIGN\n"
-    cd ../design
+    cd ${ORIG_PWD}
+}
+
+scur() {
+    ORIG_PWD=${PWD}
+    cd ~/smrtzr/
+    printf "\nMONO\n"
+    cd ./smrtzr
     git fetch --all --prune
-    git checkout ${BRANCH:-build/dev} || git checkout build/dev
+    git pull
+    printf "\nEDITOR\n"
+    cd ../editor
+    git fetch --all --prune
+    git pull
+    printf "\nPACKAGES-JAVA\n"
+    cd ../packages-java
+    git fetch --all --prune
     git pull
     cd ${ORIG_PWD}
 }

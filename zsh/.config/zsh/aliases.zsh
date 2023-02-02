@@ -62,7 +62,7 @@ alias gccal='gcloud config configurations activate cal'
 alias gcsmrt='gcloud config configurations activate smrtzr'
 alias smp='tmuxinator start players'
 alias mono='tmuxinator start mono'
-alias smrtzr='cd ~/smrtzr/'
+alias smrtzr='cd ~/smrtzr/smrtzr/'
 alias players="cd ~/smrtzr/players/"
 
 ## misc
