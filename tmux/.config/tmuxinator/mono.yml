@@ -4,7 +4,6 @@ name: mono
 root: ~/smrtzr/smrtzr/
 
 windows:
-  - neovim: nvim .
   - services:
       layout: main-vertical
       panes:

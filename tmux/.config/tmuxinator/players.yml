@@ -4,7 +4,6 @@ name: players
 root: ~/smrtzr/players/
 
 windows:
-  - neovim: nvim .
   - services:
       layout: even-horizontal
       panes:

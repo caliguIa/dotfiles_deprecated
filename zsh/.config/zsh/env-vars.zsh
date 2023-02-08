@@ -24,3 +24,16 @@ export VSCODE=code
 export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE=$HOME/.zsh_history setopt appendhistory # some useful options (man zshoptions) setopt autocd extendedglob nomatch menucomplete setopt interactive_comments
 export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/Contents/Home
+
+eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## Bun
+export BUN_INSTALL="/Users/caligula/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -s "/Users/caligula/.jabba/jabba.sh" ] && source "/Users/caligula/.jabba/jabba.sh"
+

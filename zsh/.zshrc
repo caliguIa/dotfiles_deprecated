@@ -45,13 +45,4 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 ## | |                          __/ |          
 ## |_|                         |___/
 
-eval "$(starship init zsh)"
-eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init zsh)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-## Bun
-export BUN_INSTALL="/Users/caligula/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-[ -s "/Users/caligula/.jabba/jabba.sh" ] && source "/Users/caligula/.jabba/jabba.sh"

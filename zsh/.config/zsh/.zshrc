@@ -45,12 +45,3 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 ## | |                          __/ |          
 ## |_|                         |___/
 #
-eval "$(starship init zsh)"
-eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init zsh)"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-# # bun completions
-[ -s "/Users/caligula/.bun/_bun" ] && source "/Users/caligula/.bun/_bun"
-[ -s "/Users/caligula/.jabba/jabba.sh" ] && source "/Users/caligula/.jabba/jabba.sh"
