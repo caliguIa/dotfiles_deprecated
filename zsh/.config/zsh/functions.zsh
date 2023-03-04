@@ -103,7 +103,9 @@ scur() {
 }
 
 # vscode code terminal command
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/cal/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cal/Downloads/google-cloud-sdk/path.zsh.inc'; fi
