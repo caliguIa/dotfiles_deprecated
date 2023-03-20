@@ -24,6 +24,7 @@ export VSCODE=code
 export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE=$HOME/.zsh_history setopt appendhistory # some useful options (man zshoptions) setopt autocd extendedglob nomatch menucomplete setopt interactive_comments
 export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/Contents/Home
+export BUILD_VERSION=0
 
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
