@@ -49,7 +49,7 @@ return packer.startup(function(use)
 	-- lsp
 	use("neovim/nvim-lspconfig")
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-	use("jose-elias-alvarez/typescript.nvim")
+	-- use("jose-elias-alvarez/typescript.nvim")
 	use("simrat39/rust-tools.nvim")
 	--  use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 

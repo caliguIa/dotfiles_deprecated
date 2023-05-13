@@ -1,0 +1,30 @@
+* {
+  font-size: 14px;
+  font-family: Berkeley Mono;
+  color: #dadada;
+}
+
+window#waybar {
+  background-color: #141b1e;
+}
+
+#workspaces button {
+  padding: 0 10px;
+}
+
+#workspaces button.focused {
+  color: #b3b9b8;
+}
+
+#clock,
+#battery,
+#network,
+#cpu,
+#memory,
+#bluetooth {
+  margin: 0 12px;
+}
+
+#bluetooth {
+  font-family: JetBrains Mono Nerd Font;
+}

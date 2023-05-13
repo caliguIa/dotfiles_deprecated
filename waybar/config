@@ -1,0 +1,62 @@
+{
+    "position": "bottom",
+    "height": 15,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": [ "network", "cpu", "memory", "bluetooth", "battery","clock"],
+    "sway/workspaces": {
+        "all-outputs": true,
+    },
+    "battery": {
+        "align": 1,
+        "format-time": "{H}h {M}min",
+        "format": "{icon} {capacity}%",
+        "format-icons": {
+            "default": ["\udb80\udc8e", "\udb80\udc7a", "\udb80\udc7b", "\udb80\udc7c", "\udb80\udc7d", "\udb80\udc7e", "\udb80\udc7f", "\udb80\udc80", "\udb80\udc81", "\udb80\udc82", "\udb80\udc79"],
+            "charging": ["\udb82\udc9f", "\udb82\udc9c", "\udb80\udc86", "\udb80\udc87", "\udb80\udc88", "\udb82\udc9d", "\udb80\udc89", "\udb82\udc9e", "\udb80\udc8a", "\udb80\udc8b", "\udb80\udc85"]
+        },
+        "tooltip-format": "{time}",
+        "on-click": "gnome-power-statistics",
+        "interval": 60
+    },
+    "bluetooth": {
+        "align": 1,
+        "format-off": "\udb80\udcb2",
+        "format-disabled": "\udb80\udcb2",
+        "format-on": "\uf294",
+        "format-connected": "\udb80\udcb1 {num_connections}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format": "{device_enumerate}",
+        "on-click": "blueman-manager"
+    },
+    "clock": {
+        "align": 1,
+        "interval": 1,
+        "format": "{:%a %d/%m/%y %H:%M:%S}",
+        "on-click": "gnome-calendar"
+    },
+    "cpu": {
+        "align": 1,
+        "interval": 2,
+        "format": "\udb83\udee0 {usage}%"
+    },
+    "memory": {
+        "align": 1,
+        "interval": 2,
+        "format": "\udb80\udf5b {}%"
+    },
+    "sway/window": {
+        "format": "{shell} {app_id}",
+    },
+    "network": {
+        "align": 1,
+        "format-wifi": "\udb80\udc5d {bandwidthUpBytes} \udb80\udc45 {bandwidthDownBytes}  \uf1eb",
+        "format-disconnected": "\udb82\udd2e",
+        "format-disabled": "\udb82\udd2e",
+        "tooltip-format": "{essid}\n{ipaddr}\nStrength - {signalStrength}%",
+        "on-click": "~/.local/bin/wofi-wifi-menu.sh",
+        "min-length": 24,
+        "interval": 1
+    }
+}
+

@@ -1,0 +1,27 @@
+window {
+  /* opacity: 0.8; */
+  border-radius: 0px;
+  /* border: 2px red solid; */
+  background-color: #141b1e;
+}
+
+#outer-box {
+  border-radius: 0px;
+  border: none;
+  background-color: #141b1e;
+}
+
+#entry:selected {
+  background-color: #da9154;
+}
+
+#entry {
+  color: #dadada;
+}
+
+#input {
+  border-radius: 0px;
+  background-color: #141b1e;
+  color: #dadada;
+  border: none;
+}

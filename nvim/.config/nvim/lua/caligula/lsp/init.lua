@@ -89,7 +89,7 @@ require("lspconfig").gopls.setup(config({
 	},
 }))
 
-require("lspconfig").sumneko_lua.setup(config({
+require("lspconfig").lua_ls.setup(config({
 	settings = {
 		Lua = {
 			runtime = {

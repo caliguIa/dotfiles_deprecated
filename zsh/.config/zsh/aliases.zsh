@@ -64,6 +64,7 @@ alias smp='tmuxinator start players'
 alias mono='tmuxinator start mono'
 alias smrtzr='cd ~/smrtzr/smrtzr/'
 alias players="cd ~/smrtzr/players/"
+alias killsm="kill-smartzer.sh"
 
 ## misc
 alias shell='echo $SHELL'

@@ -45,3 +45,7 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 ## | |                          __/ |          
 ## |_|                         |___/
 #
+
+# fnm
+export PATH="/home/caligula/.local/share/fnm:$PATH"
+eval "`fnm env`"
