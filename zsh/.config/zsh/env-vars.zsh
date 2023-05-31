@@ -30,7 +30,7 @@ export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/
 export BUILD_VERSION=0
 export MOZ_ENABLE_WAYLAND=1 thunderbird
 export MOZ_ENABLE_WAYLAND=1 firefox
-export WAYLAND_DISPLAY=wayland-1
+# export WAYLAND_DISPLAY=wayland-1
 export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=sway
 

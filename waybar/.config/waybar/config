@@ -10,7 +10,7 @@
     "battery": {
         "align": 1,
         "format-time": "{H}h {M}min",
-        "format": "{icon} {capacity}%",
+        "format": "<span>{icon}</span> {capacity}%",
         "format-icons": {
             "default": ["\udb80\udc8e", "\udb80\udc7a", "\udb80\udc7b", "\udb80\udc7c", "\udb80\udc7d", "\udb80\udc7e", "\udb80\udc7f", "\udb80\udc80", "\udb80\udc81", "\udb80\udc82", "\udb80\udc79"],
             "charging": ["\udb82\udc9f", "\udb82\udc9c", "\udb80\udc86", "\udb80\udc87", "\udb80\udc88", "\udb82\udc9d", "\udb80\udc89", "\udb82\udc9e", "\udb80\udc8a", "\udb80\udc8b", "\udb80\udc85"]
@@ -33,24 +33,23 @@
         "align": 1,
         "interval": 1,
         "format": "{:%a %d/%m/%y %H:%M:%S}",
-        "on-click": "gnome-calendar"
     },
     "cpu": {
         "align": 1,
         "interval": 2,
-        "format": "\udb83\udee0 {usage}%"
+        "format": "<span>\udb83\udee0</span> {usage}%"
     },
     "memory": {
         "align": 1,
         "interval": 2,
-        "format": "\udb80\udf5b {}%"
+        "format": "<span>\udb80\udf5b</span> {}%"
     },
     "sway/window": {
         "format": "{shell} {app_id}",
     },
     "network": {
         "align": 1,
-        "format-wifi": "\udb80\udc5d {bandwidthUpBytes} \udb80\udc45 {bandwidthDownBytes}  \uf1eb",
+        "format-wifi": "\udb80\udc5d {bandwidthUpBytes} \udb80\udc45 {bandwidthDownBytes} <span>\uf1eb</span>",
         "format-disconnected": "\udb82\udd2e",
         "format-disabled": "\udb82\udd2e",
         "tooltip-format": "{essid}\n{ipaddr}\nStrength - {signalStrength}%",

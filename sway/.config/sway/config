@@ -1,12 +1,12 @@
 # exec systemctl --user import-environment
 # exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec eval $(gnome-keyring-daemon --start)
-exec dbus-update-activation-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec systemctl --user start xdg-desktop-portal.service
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec mako
-
+#exec eval $(gnome-keyring-daemon --start)
+#exec dbus-update-activation-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+#exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+#exec systemctl --user start xdg-desktop-portal.service
+#exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec mako
+#
 # exec_always {
 #     systemctl --user enable pipewire-media-session || true
 #     systemctl --user start pipewire-media-session || true
@@ -59,7 +59,7 @@ input type:keyboard {
     xkb_options caps:escape
 }
 
-font pango:Berkeley Mono 9
+font pango:BerkeleyMono-Regular 9
 
 # Disable mouse warping (jump when you switch to new window/workspace)
 mouse_warping none

@@ -1,5 +1,4 @@
 ## dirs
-alias cd='z'
 alias ~='cd ~'
 alias zz='cd -'
 alias dl='cd ~/Downloads'
