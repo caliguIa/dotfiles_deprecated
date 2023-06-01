@@ -1,5 +1,6 @@
 firefox = firefox-wayland
 thunar = thunar
+code = code --enable-features=UseOzonePlatform --ozone-platform=wayland
 brave = brave-browser
 chromium = chromium-browser
 slack = ~/build/Slack-linux-arm64/Slack --ozone-platform=wayland --enable-features=WaylandWindowDecorations
