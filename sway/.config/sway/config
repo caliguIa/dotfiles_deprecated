@@ -1,25 +1,9 @@
-# exec systemctl --user import-environment
-# exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-#exec eval $(gnome-keyring-daemon --start)
-#exec dbus-update-activation-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-#exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-#exec systemctl --user start xdg-desktop-portal.service
-#exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec mako
-#
-# exec_always {
-#     systemctl --user enable pipewire-media-session || true
-#     systemctl --user start pipewire-media-session || true
-#     systemctl --user enable wireplumber.service || true
-#     systemctl --user start wireplumber.service || true
-#     systemctl --user restart xdg-desktop-portal.service || true
-#     systemctl --user enable xdg-desktop-portal-wlr.service || true
-#     systemctl --user start xdg-desktop-portal-wlr.service || true
-# }
-
 include @sysconfdir@/sway/config.d/*
 
-# exec /usr/libexec/xdg-desktop-portal -r & /usr/libexec/xdg-desktop-portal-wlr
+exec ${HOME}/.config/sway/scripts/execs.sh
+exec eval $(gnome-keyring-daemon --start)
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec mako
 
 set $mod Mod4
 set $left h
@@ -27,7 +11,7 @@ set $down j
 set $up k
 set $right l
 set $term foot
-set $menu wofi 
+set $menu kickoff 
 
 # MacOS-like keybindings
 bindsym --to-code $mod+x exec wtype -M shift -P delete
@@ -73,8 +57,10 @@ bindsym --to-code $mod+shift+p exec slurp | grim -g -
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
-bindsym $mod+Shift+d exec --no-startup-id wofi --show run -p "shell:" -L10
-bindsym $mod+d exec --no-startup-id wofi --show drun -p "app:" -L 10
+# bindsym $mod+Shift+d exec --no-startup-id wofi --show run -p "shell:" -L10
+# bindsym $mod+d exec --no-startup-id wofi --show drun -p "app:" -L 10
+bindsym $mod+Shift+d exec $menu
+bindsym $mod+d exec $menu --from-file "$HOME/.config/kickoff/entries"
 
 # Wob setup (volume/brightness visual)
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
@@ -206,5 +192,5 @@ default_floating_border pixel
 set $laptop eDP-1
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
-exec_always ${HOME}/.config/sway/scripts/laptop-display-state-on-reload.sh
+# exec_always ${HOME}/.config/sway/scripts/laptop-display-state-on-reload.sh
 

@@ -1,0 +1,8 @@
+firefox = firefox-wayland
+thunar = thunar
+brave = brave-browser
+chromium = chromium-browser
+1password = 1password
+slack = firefox-wayland --new-window https://app.slack.com/client/T0HTU6YM9/C7LU61SUD
+reboot = reboot
+shutdown = poweroff
