@@ -3,6 +3,6 @@ thunar = thunar
 brave = brave-browser
 chromium = chromium-browser
 1password = 1password
-slack = firefox-wayland --new-window https://app.slack.com/client/T0HTU6YM9/C7LU61SUD
+slack = ~/build/Slack-linux-arm64/Slack --ozone-platform=wayland --enable-features=WaylandWindowDecorations
 reboot = reboot
 shutdown = poweroff
