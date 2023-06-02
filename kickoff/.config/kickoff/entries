@@ -1,9 +1,11 @@
 firefox = firefox-wayland
 thunar = thunar
 code = code --enable-features=UseOzonePlatform --ozone-platform=wayland
+thunderbird = thunderbird
 brave = brave-browser
 chromium = chromium-browser
 slack = ~/build/Slack-linux-arm64/Slack --ozone-platform=wayland --enable-features=WaylandWindowDecorations
 bluetooth = blueman-manager
 reboot = reboot
 shutdown = poweroff
+
