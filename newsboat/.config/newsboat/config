@@ -1,4 +1,4 @@
-macro v set browser "newsboat-iina %u" ; open-in-browser ; set browser "lynx"
+macro v set browser "setsid -f mpv --really-quiet --no-terminal" ; open-in-browser ; set browser brave
 #browser "open -g -a 'Google Chrome' %u"
 #browser "newsboat-iina %u"
 bind-key j down
