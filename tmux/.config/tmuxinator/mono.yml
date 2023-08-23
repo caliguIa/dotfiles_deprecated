@@ -1,6 +1,6 @@
 # ./.tmuxinator.yml
 
-name: mono
+name: smrtzr
 root: ~/smrtzr/smrtzr/
 
 windows:
@@ -9,4 +9,4 @@ windows:
       panes:
         - yarn core
         - cd ~/smrtzr/editor; ./gradlew run
-        - cd emulators/docker; docker-compose up
+        - cd emulators/local/datastore; jabba use; ./startDatastore.sh

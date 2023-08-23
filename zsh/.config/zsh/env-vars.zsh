@@ -19,6 +19,7 @@ export DEV_STORAGE_SERVICE="$HOME/.config/auth/panda-development-1af3ae8f0648.js
 export EDITOR=nvim
 export TERMINAL=kitty
 export FIREBASE_PROJECT=panda-dev-cal-local
+export FIREBASE_AUTH_CREDENTIALS="$HOME/.config/auth/panda-dev-cal-local-c0d2a21988b5.json"
 export PNPM_HOME="$HOME/library/pnpm"
 export SSL_LOCAL_PREFIX="$HOME/.ssl/ssl/"
 export STARSHIP_CONFIG="$HOME/dotfiles/starship/.config/starship/starship.toml"

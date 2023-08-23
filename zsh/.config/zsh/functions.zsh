@@ -136,4 +136,31 @@ take() {
  cd $1
 }
 
+stream() {
+  ffmpeg -re -stream_loop -1 -i ~/smrtzr/resources/videos/10min-count-up.mp4 -c:v libx264 -c:a aac -f flv $1
+}
+
+yi() {
+  yarn install
+  yarn pluginRebuild
+  yarn core
+}
+
+kills() {
+  echo "Stopping smrtzr shit"
+  echo "Killing all docker containers"
+  dka
+  echo "Killing all node processes"
+  pkill -f "node"
+  echo "Killing all java processes"
+  pkill -f "java"
+  echo "Killing all webpack processes"
+  pkill -f "webpack"
+  echo "Stopping Colima"
+  colima stop
+  echo "Killing ports"
+  cd ~/smrtzr/smrtzr
+  yarn kill
+}
+
 setopt rm_star_silent

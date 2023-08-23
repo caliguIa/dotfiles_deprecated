@@ -76,3 +76,5 @@ alias prime="stream theprimeagen"
 alias tj="stream teej_dv"
 alias mc='mullvad connect'
 alias md='mullvad disconnect'
+alias spotify='tmuxinator start spotify'
+alias restartsd='pkill -f "spotifyd"'
