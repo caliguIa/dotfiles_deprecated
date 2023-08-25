@@ -3,6 +3,7 @@ ctrl - 2 : osascript -e 'tell application "Firefox Developer Edition" to create 
 ## ctrl - 2 : osascript -e 'tell application "Brave Browser" to create window with default profile command' || open -a "Brave Browser"
 ctrl - 3 : osascript -e 'tell application "Alacritty" to create window with default profile command' || open -a Alacritty
 ctrl - 4 : osascript -e 'tell application "Mail" to create window with default profile command' || open -a Mail
+ctrl - 5 : osascript -e 'tell application "Spotify" to create window with default profile command' || open -a Spotify
 ctrl - 8 : osascript -e 'tell application "Calendar" to create window with default profile command' || open -a Calendar
 ctrl - 9 : osascript -e 'tell application "Slack" to create window with default profile command' || open -a Slack
 
