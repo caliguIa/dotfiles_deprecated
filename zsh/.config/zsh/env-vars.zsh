@@ -17,7 +17,7 @@ export GCLOUD_CONFIG_HOME="$HOME/.config/gcloud"
 export PROJECT_ID=panda-development
 export DEV_STORAGE_SERVICE="$HOME/.config/auth/panda-development-1af3ae8f0648.json"
 export EDITOR=nvim
-export TERMINAL=kitty
+export TERMINAL=alacritty
 export FIREBASE_PROJECT=panda-dev-cal-local
 export FIREBASE_AUTH_CREDENTIALS="$HOME/.config/auth/panda-dev-cal-local-c0d2a21988b5.json"
 export PNPM_HOME="$HOME/library/pnpm"
@@ -26,8 +26,6 @@ export STARSHIP_CONFIG="$HOME/dotfiles/starship/.config/starship/starship.toml"
 export VSCODE=code
 export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE=$HOME/.config/zsh/.zsh_history setopt appendhistory # some useful options (man zshoptions) setopt autocd extendedglob nomatch menucomplete setopt interactive_comments
-export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/Contents/Home
-# export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/
 export BUILD_VERSION=0
 export MOZ_ENABLE_WAYLAND=1 thunderbird
 export MOZ_ENABLE_WAYLAND=1 firefox
@@ -35,9 +33,16 @@ export MOZ_ENABLE_WAYLAND=1 firefox
 export XDG_SESSION_TYPE=wayland
 export XDG_CURRENT_DESKTOP=sway
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/Contents/Home
+fi
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  export JAVA_HOME=$HOME/.jabba/jdk/zulu@1.8.282/
+fi
+
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
