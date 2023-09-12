@@ -1,9 +1,8 @@
 1password = 1password --enable-features=UseOzonePlatform --ozone-platform=wayland
 bluetooth = blueman-manager
 brave = brave-browser
-chromium = chromium-browser
 code = code --enable-features=UseOzonePlatform --ozone-platform=wayland
-firefox = firefox-wayland
+firefox = firefox
 slack = ~/build/Slack-linux-arm64/Slack --ozone-platform=wayland --enable-features=WaylandWindowDecorations
 shutdown = poweroff
 reboot = reboot

@@ -47,10 +47,10 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 
 
 
+[ -s "/home/caligula/.jabba/jabba.sh" ] && source "/home/caligula/.jabba/jabba.sh"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/caligula/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/caligula/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/home/caligula/google-cloud-sdk/path.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/caligula/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/caligula/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-[ -s "/home/caligula/.jabba/jabba.sh" ] && source "/home/caligula/.jabba/jabba.sh"
+if [ -f '/home/caligula/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/completion.zsh.inc'; fi
