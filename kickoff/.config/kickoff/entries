@@ -3,7 +3,7 @@ bluetooth = blueman-manager
 brave = brave-browser
 code = code --enable-features=UseOzonePlatform --ozone-platform=wayland
 firefox = firefox
-slack = ~/build/Slack-linux-arm64/Slack --ozone-platform=wayland --enable-features=WaylandWindowDecorations
+slack = firefox --new-window https://app.slack.com/client/T0HTU6YM9/C7LU61SUD/thread/C7LU61SUD-1694589772.553899 &
 shutdown = poweroff
 reboot = reboot
 thunar = thunar
