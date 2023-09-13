@@ -148,19 +148,16 @@ yi() {
 
 kills() {
   echo "Stopping smrtzr shit"
-  echo "Killing all docker containers"
-  dka
   echo "Killing all node processes"
   pkill -f "node"
   echo "Killing all java processes"
   pkill -f "java"
   echo "Killing all webpack processes"
   pkill -f "webpack"
-  echo "Stopping Colima"
-  colima stop
   echo "Killing ports"
   cd ~/smrtzr/smrtzr
   yarn kill
+  cd ~
 }
 
 setopt rm_star_silent
