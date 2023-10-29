@@ -1,0 +1,931 @@
+which $SHELL
+ls
+cd books
+la
+ls
+ls | size > 2mb
+ls | where  size > 2mb
+la
+..
+cd Cemu_2.0-7/
+la
+ls
+open .
+open
+open dir
+la
+ls
+./Cemu
+(fetch https://api.chucknorris.io/jokes/random).value
+ls
+ls | where  size > 2mb
+brew 
+brew list
+cd 
+ls
+clear
+ls
+ls -a
+eza -ls
+eza
+ls
+ls 0a
+ls -a
+ls -la
+echo "hello"
+/ bob
+10 / bob
+10
+hi
+1
+d
+df
+dotfiles
+cd dotfiles
+ls
+..
+z
+cd
+cd dotfiles
+ls
+mkdir nushell
+cd nushell/
+ls
+mkdir -p .config/nushell
+mkdir .config/nushell
+ls
+ls .config/
+brew list
+brew uninstall eloston-chromium
+sudo port -v selfupdate
+port upgrade outdated
+sudo port upgrade outdated
+port diagnose
+sudo port diagnose
+sudo port reclaim
+sudo port list
+clear
+sudo port clean
+t
+tmux
+which starship
+brew list
+hi
+exit
+which nu
+brew list
+which cloudflared
+sudo port install cloudflared
+sudo port load skhd
+skhd
+sudo port unload skhd
+clear
+echo $EDITOR
+echo $env.EDITOR
+env
+clear
+sudo port install cmake
+chsh -s $(which nu)
+which nu
+chsh -s /opt/local/bin/nu
+which skhd
+brew install skhd
+which brew
+zsh
+clear
+startship
+which starship
+which atuin
+ls
+ps
+ps | where status == Running
+uptime
+sys | get host
+clear
+sudo port install google-cloud-sdk
+zsh
+config nu
+echo $nu.config.path
+echo $nu.config-path
+nvim
+vim
+clear
+nvim
+which nvim
+brew list
+which brew
+sudo port install google-cloud-dk
+$env.config = {<\n>  show_banner: false,<\n>}
+$env.config = {<\n>  show_banner: false,}
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/local/bin')
+brew list
+clear
+nvim
+atuin
+clear
+eza
+clear
+tmux
+brew list
+df
+dotfiles
+./dotfiles
+ls
+which starship
+starship
+clear
+ls
+cd zsh
+ls
+cd .config/
+cd zsh/
+ls
+echo $SHELL
+echo $env.SHELL
+clear
+cd /opt/local/
+ls
+cd sbin
+ls
+ls -la
+..
+ls
+..
+cd homebrew/
+ls
+cd sbin
+ls
+echo $HOM
+echo $HOME
+echo $env.home
+echo $env.HOME
+which gcloud
+gcloud
+cd
+ls
+cd /usr/local/bin
+ls
+ls -la
+which mullvad
+nvim env-vars.zsh
+config env
+smrtzr
+cd smrtzr/
+t
+mono
+tmuxinator
+tmuxinator start mono
+cd /Users/caligula/smrtzr/smrtzryarn core
+yarn core
+fnm
+fnm list
+yarn
+sudo port install yarn
+tks
+exit
+tmux
+stream 91a38aae-2351-51de-ee81-0f732d88acc2
+starship preset pure-preset -o ~/.config/starship.toml<\n>
+gst
+git status
+zsh
+clear
+brew list
+sudo port selfupdate
+sudo port upgrade outdated
+skhd --start-service
+brew uninstall skhd
+which skhd
+skhd
+skhd --stop-service
+df
+cd
+cd dotfiles
+vim skhd/.config/skhd/skhdrc
+skhd
+skhd -h
+shkd --help
+skhd --verbose
+which open
+zsh
+skhd --verbose
+skhd --start-service
+skhd --reload
+skhd --install-service
+skhd --uninstall-service
+skhd --start-service
+echo $env.HOME
+echo $env.SHELL
+sudo port selfupdate && sudo port update outdated
+sudo port selfupdate and  sudo port update outdated
+sudo port selfupdate; sudo port update outdated
+sudo port selfupdate; sudo port upgrade outdated
+sudo port installed
+brew list
+t
+brew list
+clear
+brew list
+aom
+brew uninstall aom
+brew uninstall imagemagick
+brew uninstall lsix
+brew uninstall cloudflared
+brew autoremove
+clear
+brew list
+which git
+brew uninstall git
+brew autoremove
+brew uninstall brotli
+brew uninstall fontforge
+brew uninstall cairo
+brew uninstall gnutls
+brew uninstall gnuph
+brew uninstall gnupg
+brew uninstall fontconfig
+brew uninstall cairo
+brew uninstall pango
+brew uninstall harfbuxx
+brew uninstall harfbuzz
+brew autoremove
+brew list
+which cmake
+brew uninstall cmake
+brew uninstall docker
+brew uninstall docker-compose
+brew uninstall gettext
+brew uninstall wget
+brew uninstall gnutls
+brew uninstall qemu
+brew uninstall mas
+brew uninstall ncurses
+brew uninstall tmux
+brew uninstall tmuxinator
+brew uninstall tmux
+brew autoremove
+brew uninstall coreutils 
+brew uninstall git-filter-repo
+brew uninstall gmp
+brew uninstall gnu-sef
+brew uninstall gnu-sed
+brew uninstall nnn
+brew uninstall gum]
+brew uninstall gum
+brew uninstall ifstat
+brew uninstall lazygit
+brew uninstall less
+brew uninstall circumflex
+brew uninstall lau
+brew uninstall lua
+brew uninstall luarocks
+brew uninstall lua
+brew uninstall lynx
+brew uninstall pipenv
+brew uninstall pnpm
+brew uninstall portaudio
+brew uninstall readline
+brew uninstall sd
+brew uninstall slides
+brew uninstall sqlite
+brew uninstall tokei
+brew uninstall transmission-cli
+brew uninstall w3m
+brew uninstall zx
+brew uninstall xz
+brew uninstall yarn
+brew uninstall youtube-dl
+brew autoremove
+brew list
+brew uninstall lua-language-server
+brew uninstall mpdecimal
+brew uninstall libmodbus
+brew uninstall ca-certificated
+brew uninstall ca-certificates
+brew uninstall google-cloud-sdk
+brew autoremove
+clear
+brew list
+sudo port diagnose
+clear
+clear
+df
+dotfiles
+cd dotfiles
+ls
+vim zsh/.config/zsh/env-vars.zsh
+fnm
+fnm -v
+fnm -V
+fnm list
+clear
+nvim zsh/.config/zsh/env-vars.zsh
+cd
+cd smrtzr/
+fnm use
+cd smrtzr/
+yarn core
+cd dotfiles
+vim zsh/.config/zsh/env-vars.local.zsh
+ls
+cd
+cd .config/
+vim zsh/.config/zsh/env-vars.local.zsh
+tmux
+cd smrtzr/smrtzr/
+nvim `Library/Application Support/nushell/local-envars.nu`
+yarn core
+exit
+cd dotfiles
+exit
+t
+ip
+t
+ipconfig
+ip
+bsc
+shell
+v
+mvc
+mvd
+vim zsh/.config/zsh/aliases.zsh
+nvim `Library/Application Support/nushell/aliases.nu`
+vim zsh/.config/zsh/functions.zsh
+kills
+stream 91a38aae-2351-51de-ee81-0f732d88acc2
+stream "91a38aae-2351-51de-ee81-0f732d88acc2"
+hello cal
+stream 91a38aae-2351-51de-ee81-0f732d88acc2
+pkill
+pkill -f "java"
+hi
+ip
+pkill -f java
+nvim `Library/Application Support/nushell/functions.nu`
+vim zsh/.config/zsh/.zshrc
+mkdir ~/.local/share/atuin/<\n>atuin init nu | save ~/.local/share/atuin/init.nu
+atuin
+atuin status
+atuin account
+atuin sync
+mono
+which tmuxinator
+t
+clear
+t
+df
+cd dotfiles
+mono
+tmux
+jcla
+clera
+clear
+tmuxinator start mono
+cd dotfiles
+cd tmux/.config/tmuxinator/
+ls
+cd .config/tmuxinator/
+ls
+ls -a
+ls -la
+echo $env.SHELL && echo 'hi'
+mono
+cd /Users/caligula/smrtzr/smrtzrand yarn core
+mono
+cd ~/smrtzr/smrtzr/ and yarn core
+cd ~/smrtzr/smrtzr/; yarn core
+keybindings list | where type == events
+event: { send: Enter }
+asdfkjjjjj
+clear
+cd dotfiles
+mkdir wezterm/.config/wezterm
+vim wezterm/.config/wezterm/wezterm.lua
+stow wezterm
+clear
+vim wezterm/.config/wezterm/wezterm.lua
+cd dotfiles
+cler
+clear
+vim mono.yml
+tmux
+clear
+cd 
+vim `Library/Application Support/nushell/env.nu`
+clear
+vim wezterm/.config/wezterm/wezterm.lua
+clear
+sudo port selfupdate; sudo port upgrade outdated
+vim skhd/.config/skhd/skhdrc
+skhd --reload
+sudo port diagnose
+cd /usr/local/lib
+ls
+ls -la
+rm libpacefusion_shared.dylib
+clear
+sudo port diagnose
+clar
+clear
+exit
+gst
+git status
+dfp
+gac
+clear
+vim wezterm/.config/wezterm/wezterm.lua
+exit
+zellij
+cd ~/smrtzr/editor; ./gradlew run
+cd ~/smrtzr/smrtzr/emulators/local/datastore; jabba use; ./startDatastore.sh
+which jabba
+vim zsh/.config/zsh/.zshrc
+vim wezterm/.config/wezterm/wezterm.lua
+cd
+cd .jabba/
+ls
+export JABBA_VERSION=0.11.2<\n>curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+export JABBA_VERSION=0.11.2<\n>curl -sL https://github.com/shyiko/jabba/raw/master/install.sh ^bash; . ~/.jabba/jabba.sh
+$env.JABBA_VERSION=0.11.2<\n>curl -sL https://github.com/shyiko/jabba/raw/master/install.sh ^bash; . ~/.jabba/jabba.sh
+$env.JABBA_VERSION = 0.11.2<\n>curl -sL https://github.com/shyiko/jabba/raw/master/install.sh ^bash; . ~/.jabba/jabba.sh
+jabba
+which gcloud
+mono
+cd
+vim `Library/Application Support/nushell/env.nu`
+clear
+vim `Library/Application Support/nushell/env.nu`
+cd
+vim `Library/Application Support/nushell/env.nu`
+cd dotfiles
+vim zsh/.config/zsh/env-vars.zsh
+clear
+tks
+vim tmux/.config/tmuxinator/mono.yml
+mono
+zsh cd ~/smrtzr/smrtzr; yarn core
+~/smrtzr/editor; ./gradlew run
+cd ~/smrtzr/editor; ./gradlew run
+stream de81933d-3f9a-2e24-60a3-1823a4b16090
+smp
+cd /Users/caligula/smrtzr/players and npm run watch
+stream de81933d-3f9a-2e24-60a3-1823a4b16090
+npm run build swisscomm
+ls
+cd build
+ls
+mv swiss_commerce.min.css swiss_commerce_v3.min.css
+clear
+kills
+cler
+clear
+mkdir zellij/.config/zellij/layouts
+smrtzr
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+smrtzt
+smrtzr
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+clear
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+cler
+clear
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+zsh -c ls
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+cd
+cd .jabba/
+ls
+cd bin
+ls
+..
+ls
+cd jdk
+ls
+cd openjdk@1.11.0/
+ls
+cd Contents/
+ls
+cd MacOS/
+ls
+..
+ls
+cd Home/
+ls
+cd bin
+ls
+jshell
+vim zellij/.config/zellij/layouts/mono.kdl
+stow zellij
+cd
+ls
+..
+s
+ls
+cd bin
+ls
+cd
+cd .jabba/jdk/openjdk@1.11.0/
+ls
+cd Contents/
+ls
+cd Home/
+ls
+cd bin
+pwd
+./startDatastore.sh
+gcloud
+cd
+cd google-cloud-sdk/ls
+cd google-cloud-sdk/
+ls
+cd bin
+ls
+gcloud
+./gcloud
+gcloud
+echo $env.PATH
+echo $env.HOME
+echo $env.PATH
+gcloud
+cd ...
+..
+cd editor/
+./startDatastore.sh
+ls
+./gradlew run
+cd
+vim `Library/Application Support/nushell/env.nu`
+$env.SHELL
+$env.SHELL == hi 
+$env.SHELL === hi 
+$env.SHELL == /opt/local/bin/nu 
+smrtzr
+..
+cd editor/
+smrtzr
+cd ../editor/
+./gradlew run
+cd ../smrtzr/emulators/local/datastore/
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+smrtzr
+cdc ../editor/
+cd ..
+ls
+cd editor/
+echo $env.JAVA_HOME
+smrtzr
+cd emulators/local/datastore/
+echo $env.JAVA_HOME
+cd ../smrtzr/emulators/local/datastore/
+vim tmux/.config/tmuxinator/mono.yml
+cd ../smrtzr/emulators/local/datastore/
+jabba use
+echo $env.JAVA_HOME
+colima start
+colima delete
+stream cc2abfa9-87f8-e98e-34a1-4b6f3426cffb
+colima start
+cd ../smrtzr/emulators/local/datastore/
+cd /Users/caligula/.jabba/jdk/openjdk@1.11.0/Contents/Home
+ls
+cd bin
+ls
+jabba
+jabba use
+./startDatastore.sh
+npx kill-port 8484
+./gradlew run
+yi
+npx kill-port 8484
+zellij -a
+npx kill-port 8484
+ls
+ls -a
+clear
+vim `Library/Application Support/nushell/local-envars.nu`
+kills
+npx kill-port 8484
+clear
+smrtzr
+cd emulators/local/datastore/
+echo $env.JAVA_HOME
+./gradlew run
+kills
+smrtzr
+cd emulators/local/datastore/
+echo $env.JAVA_HOME
+npx kill-port 8484
+clear
+cd dotfiles
+kills
+clear
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+clear
+kills
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+kills
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+clear
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+npx kill-port 8484
+kills
+vim zellij/.config/zellij/layouts/mono.kdl
+vim `Library/Application Support/nushell/config.nu`
+vim `Library/Application Support/nushell/env.nu`
+npx kill-port 8484
+dotfiles
+cd dotfiles
+ls
+vim wezterm/.config/wezterm/wezterm.lua
+cd dotfiles
+sudo port selfupdate; sudo port upgrade outdated
+cd dotfiles
+vim zellij/.config/zellij/layouts/mono.kdl
+zellij ka
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+kills
+npx kill-port 8484
+cd dotfiles
+stream b751ea94-af5a-22e7-5d3e-1094c16a51b4
+bsc
+brew list
+clear
+stream fb6063dd-06ab-818c-93ab-a055f0c68d13
+stream bbd669ac-cd37-8ca5-22ee-7fca7b92402e
+stream f6bcb909-cbc0-feae-02b1-773edc277b21
+smrtzr
+yarn instal
+yarn install
+yarn pluginRebuild
+smrtzr
+yarn install
+smrtzr
+yarn core --filter=@smrtzr/player-server
+yarn core --filter=!@smrtzr/player-server
+yarn dev --filter=@smrtzr/player-server
+yarn dev --filter=@smrtzr/plugins --filter=@smrtzr/player
+exit
+cd
+vim x
+mv x x.txt
+cat x
+cat x.txt
+mono
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+zellij ka
+clear
+kills
+clear
+sudo port selfupdate; sudo port upgrade outdated
+yi
+yarn install
+yarn pluginRebuild
+exit
+yarn install
+yarn pluginRebuild
+sudo port selfupdate; sudo port upgrade outdated
+yarn install
+yarn pluginRebuild
+yarn install
+yarn pluginRebuild
+localip
+players
+cd build
+npm run build swisscomm
+ls
+mv swiss_commerce.min.css swiss_commerce_v4.min.css
+undocommit
+gfp
+git fetch
+git pull
+git merge origin/PAN-1889
+sudo port selfupdate; sudo port upgrade outdated
+bsc
+stream f6bcb909-cbc0-feae-02b1-773edc277b21
+sudo port selfupdate; sudo port upgrade outdated
+stream de81933d-3f9a-2e24-60a3-1823a4b16090
+players
+cd build
+npm run build swisscomm
+mv swiss_commerce.min.css swiss_commerce_v5.min.css
+stream de81933d-3f9a-2e24-60a3-1823a4b16090
+players
+cd build
+npm run build swisscomm
+mv swiss_commerce.min.css swiss_commerce_v6.min.css
+yarn install
+yarn core
+gst
+git status
+git fetch; git pull
+git merge origin/new_sdk_pip
+smrtzr
+clear
+git status
+git fetch; git pull
+git merge origin/PAN-1889
+git status
+git fetch; git pull
+git merge origin/new_sdk_pip
+yarn install
+git status
+yarn install
+kills
+zellij ka
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+sudo port selfupdate; sudo port upgrade outdated
+sudo port remove cloudflared
+sudo port uninstall cloudflared
+bsc
+sudo port selfupdate; sudo port upgrade outdated
+xcode-select --install
+updatel
+sudo port -qv installed > myports.txt
+sudo port -qv installed | myports.txt
+sudo port -qv installed out> myports.txt
+cat myports.txt
+sudo port echo requested | cut -d ' ' -f 1 | uniq out> requested.txt
+cat requested.txt
+sudo port -f uninstall installed
+clear
+cat myports.txt
+sudo port unsetrequested installed
+xargs sudo port setrequested < requested.txt
+zsh
+sudo ./restore_ports.tcl myports.txt
+helix
+sudo ./restore_ports.tcl myports.txt
+sudo port reclaim
+sudo port remove wezterm
+sudo port uninstall wezterm
+sudo port clean wezterm
+sudo port clean cloudflared
+sudo port install wezterm
+sudo ./restore_ports.tcl myports.txt
+sudo port clean neovim
+sudo port clean newsboat
+sudo port install neovim
+sudo port clean neovim
+which nvim
+nvim
+sudo port install neovim
+cat /opt/local/var/macports/logs/_opt_local_var_macports_sources_rsync.macports.org_macports_release_tarballs_ports_editors_neovim/neovim/main.log
+clear
+sudo port clean neovim
+skhd --start-service
+skhd
+sudo port install neovim
+which skhd
+skhd
+skhd --start-service
+exit
+cat /opt/local/var/macports/logs/_opt_local_var_macports_sources_rsync.macports.org_macports_release_tarballs_ports_editors_neovim/neovim/main.log
+sudo port diagnose
+sudo port clean neovim
+brew install neovim
+nvim
+sudo port unsetrequested installed
+vim requested.txt
+vim myports.txt
+sudo ./restore_ports.tcl myports.txt
+sudo port unsetrequested installed
+zsh
+sudo port selfupdate; sudo port upgrade outdated
+sudo port reclaim
+sudo port diagnose
+sudo port clean neovim
+brew uninstall neovim
+sudo port install neovim
+brew install neovim
+clear
+sudo port clean neovim
+clear
+sudo port reclaim
+sudo port selfupdate; sudo port upgrade outdated
+bsc
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+zellij ka
+cler
+clear
+mono
+clear
+sud
+sudo port selfupdate; sudo port upgrade outdated
+sudo port reclaim
+clear
+bsc
+brew uninstall onyx
+appclean /Applications/OnyX.app/
+brew install onyx
+brew autoremove
+bsc
+clear
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+kills
+df
+cd dotfiles
+git status
+cd ../.config/zellij/layouts/
+ls
+vim mono.kdl
+yarn install
+yarn pluginRebuild
+stream c8d9e4c3-61ab-82a9-dba7-b2d717843d12
+yarn core
+yarn install
+yarn pluginRebuild
+yarn install
+yarn pluginRebuild
+yarn install
+yarn pluginRebuild
+smrtzr
+cd ..
+ls
+cd player
+ls
+./gradlew run
+gfp
+git fetch; git pull
+cd ../packages-java/
+git fetch; git pull
+git checkout PAN-1928
+git fetch; git pull
+git checkout PAN-1928
+cd ../smrtzr/
+cd infra/logging/dev/
+terraform plan
+sudo port install terraform
+terraform init
+sudo port select --set terraform terraform1.6
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+terraform apply
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+kills
+clear
+cd ..
+cd players
+./gradlew run
+cd ../player
+exit
+yarn install
+exit
+smrtzr
+git reset --soft HEAD~1
+git diff origin/new_sdk_pip origin/build/dev out> diff.diff
+cat diff.diff
+git fetch; git pull
+git merge origin/build/dev
+girt status
+git status
+rm diff.diff
+git diff origin/new_sdk_pip origin/build/dev out> x.diff
+git diff origin/new_sdk_pip origin/build/dev 
+git apply x.diff
+git diff origin/build/dev origin/new_sdk_pip out> x2.diff
+git apply x2.diff
+git diff origin/build/dev origin/new_sdk_pip out> x2.diff
+git apply x2.diff
+yarn install
+cd ../smrtzr/
+yarn install
+exit
+yarn install
+zellij --layout ~/dotfiles/zellij/.config/zellij/layouts/mono.kdl
+kills
+clear
+cd devg
+cd dev
+ls
+rm -rf typistry/
+npm create t3-app@latest
+cd typistry/
+ls
+npm run dev
+npm run start
+..
+rm -rf typistry/
+npm create t3-app@latest
+ls
+bunx create-t3-app@latest
+sudo port selfupdate; sudo port upgrade outdated\
+which zsh
+chsh -s /bin/zsh
+sudo port selfupdate; sudo port upgrade outdated
+sudo port reclaim
+sudo port diagnose
+exit
+which $SHELL
+exit
+l
+vim nushell/config.nu
+exit
+vim nushell/config.nu
+exit
+echo $env.JAVA_HOME
+clear
+exit
