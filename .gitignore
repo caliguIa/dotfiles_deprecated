@@ -59,6 +59,6 @@ luac.out
 
 .zsh_history
 
-plugin/packer_compiled.lua
 zsh/.config/zsh/plugins/
 zsh/.config/zsh/env-vars.local.zsh
+nu/Library/Application Support/nu/envars-local.nu

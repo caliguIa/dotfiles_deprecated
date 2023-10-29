@@ -22,6 +22,7 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 -- NOTE: Here is where you install your plugins.
@@ -39,6 +40,17 @@ require("lazy").setup({
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
 
+	-- colour highlights
+	"NvChad/nvim-colorizer.lua",
+
+	-- decorated scrollbar
+	{
+		"petertriho/nvim-scrollbar",
+		config = function()
+			require("scrollbar").setup()
+		end,
+	},
+
 	-- File explorer
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -48,7 +60,22 @@ require("lazy").setup({
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
-			require("nvim-tree").setup({})
+			require("nvim-tree").setup({
+				update_focused_file = {
+					enable = true,
+					update_root = false,
+					ignore_list = {},
+				},
+			})
+		end,
+	},
+
+	-- Todo comments
+	{
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({})
 		end,
 	},
 
@@ -58,6 +85,25 @@ require("lazy").setup({
 		version = "*",
 		config = function()
 			require("mini.move").setup()
+			require("mini.pairs").setup()
+			require("mini.surround").setup()
+			require("mini.jump").setup()
+			require("mini.indentscope").setup()
+			require("mini.cursorword").setup()
+			require("mini.comment").setup()
+			require("mini.basics").setup({
+				options = {
+					-- Presets for window borders ('single', 'double', ...)
+					win_borders = "rounded",
+				},
+				-- Autocommands. Set to `false` to disable
+				autocommands = {
+					-- Set 'relativenumber' only in linewise and blockwise Visual mode
+					relnum_in_visual_mode = true,
+				},
+				-- Whether to disable showing non-error feedback
+				silent = true,
+			})
 		end,
 	},
 
@@ -231,21 +277,21 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		-- Add indentation guides even on blank lines
-		"lukas-reineke/indent-blankline.nvim",
-		-- Enable `lukas-reineke/indent-blankline.nvim`
-		-- See `:help indent_blankline.txt`
-		main = "ibl",
-		opts = {
-			indent = {
-				char = "┊",
-			},
-		},
-	},
+	-- {
+	-- 	-- Add indentation guides even on blank lines
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	-- Enable `lukas-reineke/indent-blankline.nvim`
+	-- 	-- See `:help indent_blankline.txt`
+	-- 	main = "ibl",
+	-- 	opts = {
+	-- 		indent = {
+	-- 			char = "┊",
+	-- 		},
+	-- 	},
+	-- },
 
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim", opts = {} },
+	-- { "numToStr/Comment.nvim", opts = {} },
 
 	-- Fuzzy Finder (files, lsp, etc)
 	{ "nvim-telescope/telescope.nvim", branch = "0.1.x", dependencies = { "nvim-lua/plenary.nvim" } },
@@ -371,6 +417,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 	pattern = "*",
 })
+
+-- hightlight colours
+require("colorizer").setup({})
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
@@ -622,24 +671,24 @@ cmp.setup({
 			behavior = cmp.ConfirmBehavior.Replace,
 			select = true,
 		}),
-		-- ["<Tab>"] = cmp.mapping(function(fallback)
-		-- 	if cmp.visible() then
-		-- 		cmp.select_next_item()
-		-- 	elseif luasnip.expand_or_locally_jumpable() then
-		-- 		luasnip.expand_or_jump()
-		-- 	else
-		-- 		fallback()
-		-- 	end
-		-- end, { "i", "s" }),
-		-- ["<S-Tab>"] = cmp.mapping(function(fallback)
-		-- 	if cmp.visible() then
-		-- 		cmp.select_prev_item()
-		-- 	elseif luasnip.locally_jumpable(-1) then
-		-- 		luasnip.jump(-1)
-		-- 	else
-		-- 		fallback()
-		-- 	end
-		-- end, { "i", "s" }),
+		["<Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif luasnip.expand_or_locally_jumpable() then
+				luasnip.expand_or_jump()
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
+		["<S-Tab>"] = cmp.mapping(function(fallback)
+			if cmp.visible() then
+				cmp.select_prev_item()
+			elseif luasnip.locally_jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				fallback()
+			end
+		end, { "i", "s" }),
 	}),
 	sources = {
 		{ name = "nvim_lsp" },
