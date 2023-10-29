@@ -137,7 +137,7 @@ take() {
 }
 
 stream() {
-  ffmpeg -re -stream_loop -1 -i ~/smrtzr/resources/videos/10min-count-up.mp4 -c:v libx264 -c:a aac -f flv $1
+  ffmpeg -re -stream_loop -1 -i ~/smrtzr/resources/videos/10min-count-up.mp4 -c:v libx264 -c:a aac -f flv rtmp://stream.smartzer.com:5222/app/$1
 }
 
 yi() {

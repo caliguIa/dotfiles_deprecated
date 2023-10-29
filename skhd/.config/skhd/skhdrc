@@ -1,10 +1,11 @@
-ctrl - 1 : osascript -e 'tell application "Visual Studio Code" to create window with default profile command' || open -a "Visual Studio Code"
-# ctrl - 2 : osascript -e 'tell application "Orion" to create window with default profile command' || open -a "Orion"
-ctrl - 2 : osascript -e 'tell application "Firefox Developer Edition" to create window with default profile command' || open -a "Firefox Developer Edition"
-## ctrl - 2 : osascript -e 'tell application "Brave Browser" to create window with default profile command' || open -a "Brave Browser"
-ctrl - 3 : osascript -e 'tell application "Alacritty" to create window with default profile command' || open -a Alacritty
-ctrl - 4 : osascript -e 'tell application "Spotify" to create window with default profile command' || open -a Spotify
-ctrl - 5 : osascript -e 'tell application "Mail" to create window with default profile command' || open -a Mail
-ctrl - 8 : osascript -e 'tell application "Calendar" to create window with default profile command' || open -a Calendar
-ctrl - 9 : osascript -e 'tell application "Slack" to create window with default profile command' || open -a Slack
+# ctrl - 1 : /usr/bin/open -a "Zed"
+ctrl - 1 : /usr/bin/open -a "Visual Studio Code"
+## ctrl - 2 : /usr/bin/open -a "Orion"
+# ctrl - 2 : /usr/bin/open -a "Firefox Developer Edition"
+ctrl - 2 : /usr/bin/open -a "Brave Browser"
+ctrl - 3 : /usr/bin/open -a WezTerm
+ctrl - 4 : /usr/bin/open -a Spotify
+ctrl - 5 : /usr/bin/open -a Mail
+ctrl - 8 : /usr/bin/open -a Calendar
+ctrl - 9 : /usr/bin/open -a Slack
 

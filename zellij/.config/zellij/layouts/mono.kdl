@@ -1,0 +1,20 @@
+layout {
+	pane split_direction="vertical" {
+		pane command="yarn" {
+			args "core"
+			cwd "~/smrtzr/smrtzr/"
+		}
+		pane split_direction="horizontal" {
+			pane command="./gradlew" {
+				args "run"
+				cwd "~/smrtzr/editor/"
+			}
+			pane command="./startDatastore.sh"{
+				cwd "~/smrtzr/smrtzr/emulators/local/datastore/"
+			}
+		}
+	}
+	pane size=2 borderless=true {
+		plugin location="zellij:status-bar"
+	}
+}
