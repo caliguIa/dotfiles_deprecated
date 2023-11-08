@@ -11,6 +11,9 @@ require("telescope").setup({
 	},
 })
 
+-- truncate file paths in find files
+-- require("telescope.builtin").find_files({ path_display = { "truncate" } })
+
 -- Enable telescope fzf native, if installed
 pcall(require("telescope").load_extension, "fzf")
 

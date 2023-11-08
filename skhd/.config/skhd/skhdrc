@@ -1,11 +1,20 @@
 # ctrl - 1 : /usr/bin/open -a "Zed"
-ctrl - 1 : /usr/bin/open -a "Visual Studio Code"
+# ctrl - 1 : /usr/bin/open -a "Visual Studio Code"
 ## ctrl - 2 : /usr/bin/open -a "Orion"
 # ctrl - 2 : /usr/bin/open -a "Firefox Developer Edition"
-ctrl - 2 : /usr/bin/open -a "Brave Browser"
-ctrl - 3 : /usr/bin/open -a WezTerm
-ctrl - 4 : /usr/bin/open -a Spotify
-ctrl - 5 : /usr/bin/open -a Mail
-ctrl - 8 : /usr/bin/open -a Calendar
-ctrl - 9 : /usr/bin/open -a Slack
+# ctrl - 1 : /usr/bin/open -a WezTerm
+# ctrl - 2 : /usr/bin/open -a "Brave Browser"
+# ctrl - 3 : /usr/bin/open -a Slack
+# ctrl - 4 : /usr/bin/open -a Spotify
+# ctrl - 5 : /usr/bin/open -a Mail
+# ctrl - 8 : /usr/bin/open -a Calendar
+hyper - a : /usr/bin/open -a WezTerm
+hyper - s : /usr/bin/open -a "Brave Browser"
+hyper - d : /usr/bin/open -a Slack
+hyper - f : /usr/bin/open -a Spotify
+hyper - q : /usr/bin/open -a Calendar
+hyper - w : /usr/bin/open -a Messages
+hyper - e : /usr/bin/open -a Mail
+hyper - r : /usr/bin/open -a Finder
+
 

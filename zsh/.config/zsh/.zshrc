@@ -49,4 +49,5 @@ source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 # fnm
 export PATH="/home/caligula/.local/share/fnm:$PATH"
 eval "`fnm env`"
+eval "$(atuin init zsh)"
 bindkey -e
