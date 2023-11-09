@@ -1,11 +1,12 @@
 # ./.tmuxinator.yml
 
 name: smrtzr
+root: ~/smrtzr/smrtzr/
 
 windows:
   - services:
       layout: main-vertical
       panes:
         - cd ~/smrtzr/smrtzr; yarn core
-        - cd ~/smrtzr/editor; ./gradlew run
+        - cd ~/smrtzr/java/editor; ./gradlew run
         - cd ~/smrtzr/smrtzr/emulators/local/datastore; jabba use; ./startDatastore.sh
