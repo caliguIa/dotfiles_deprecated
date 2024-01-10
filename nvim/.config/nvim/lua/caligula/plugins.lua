@@ -15,9 +15,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require("lazy").setup({
@@ -31,37 +28,18 @@ require("lazy").setup({
 	"tpope/vim-sleuth",
 
 	-- colour highlights
-	{
-		"NvChad/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup({})
-		end,
-	},
+	-- {
+	-- 	"NvChad/nvim-colorizer.lua",
+	-- 	config = function()
+	-- 		require("colorizer").setup({})
+	-- 	end,
+	-- },
 
 	-- decorated scrollbar
 	{
 		"petertriho/nvim-scrollbar",
 		config = function()
 			require("scrollbar").setup()
-		end,
-	},
-
-	-- File explorer
-	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = false,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("nvim-tree").setup({
-				update_focused_file = {
-					enable = true,
-					update_root = false,
-					ignore_list = {},
-				},
-			})
 		end,
 	},
 
@@ -86,17 +64,27 @@ require("lazy").setup({
 			require("mini.indentscope").setup()
 			require("mini.cursorword").setup()
 			require("mini.comment").setup()
+			local hipatterns = require("mini.hipatterns")
+			hipatterns.setup({
+				highlighters = {
+					hex_color = hipatterns.gen_highlighter.hex_color(),
+				},
+			})
+			require("mini.files").setup({
+				windows = {
+					preview = true,
+					width_preview = 80,
+					width_focus = 35,
+					width_nofocus = 8,
+				},
+			})
 			require("mini.basics").setup({
 				options = {
-					-- Presets for window borders ('single', 'double', ...)
 					win_borders = "rounded",
 				},
-				-- Autocommands. Set to `false` to disable
 				autocommands = {
-					-- Set 'relativenumber' only in linewise and blockwise Visual mode
 					relnum_in_visual_mode = true,
 				},
-				-- Whether to disable showing non-error feedback
 				silent = true,
 			})
 		end,
@@ -268,6 +256,9 @@ require("lazy").setup({
 				theme = "bamboo",
 				component_separators = "|",
 				section_separators = "",
+			},
+			sections = {
+				lualine_c = { { "filename", file_status = true, path = 1 } },
 			},
 		},
 	},

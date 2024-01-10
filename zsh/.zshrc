@@ -36,22 +36,9 @@ source $HOME/dotfiles/zsh/.config/zsh/functions.zsh
 source $HOME/dotfiles/zsh/.config/zsh/plugins.zsh
 
 
-##                   _                         
-##                  | |                        
-##  _ __   __ _  ___| | ____ _  __ _  ___  ___ 
-## | '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \/ __|
-## | |_) | (_| | (__|   < (_| | (_| |  __/\__ \
-## | .__/ \__,_|\___|_|\_\__,_|\__, |\___||___/
-## | |                          __/ |          
-## |_|                         |___/
-
-
-
-[ -s "/home/caligula/.jabba/jabba.sh" ] && source "/home/caligula/.jabba/jabba.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/caligula/google-cloud-sdk/path.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/caligula/build/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/caligula/build/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/caligula/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/completion.zsh.inc'; fi
-bindkey -e
+if [ -f '/Users/caligula/build/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/caligula/build/google-cloud-sdk/completion.zsh.inc'; fi

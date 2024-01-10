@@ -136,8 +136,19 @@ take() {
  cd $1
 }
 
-stream() {
+streamvid() {
   ffmpeg -re -stream_loop -1 -i ~/smrtzr/resources/videos/10min-count-up.mp4 -c:v libx264 -c:a aac -f flv rtmp://stream.smartzer.com:5222/app/$1
+}
+
+stream() {
+  ffmpeg -re -stream_loop -1 \
+    -r 30 \
+    -f lavfi \
+    -i testsrc \
+    -vf scale=1920:1080 \
+    -c:v libx264 \
+    -c:a aac \
+    -f flv rtmp://stream.smartzer.com:5222/app/$1
 }
 
 yi() {
@@ -161,3 +172,18 @@ kills() {
 }
 
 setopt rm_star_silent
+
+
+# fnm
+export PATH="/home/caligula/.local/share/fnm:$PATH"
+eval "`fnm env`"
+eval "$(atuin init zsh)"
+bindkey -e
+[ -s "/home/caligula/.jabba/jabba.sh" ] && source "/home/caligula/.jabba/jabba.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/caligula/google-cloud-sdk/path.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/caligula/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/completion.zsh.inc'; fi
+bindkey -e

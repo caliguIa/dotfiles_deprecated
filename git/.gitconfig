@@ -2,14 +2,17 @@
 [user]
     name = Cal
     email = accounts@cal.rip
+
 [init]
     defaultBranch = main
+
 [core]
     symlinks = true
     pager = delta
 
 [interactive]
     diffFilter = delta --color-only
+
 [add.interactive]
     useBuiltin = false # required for git 2.37.0
 
@@ -22,8 +25,12 @@
 
 [diff]
     colorMoved = default
+
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+
+[push]
+    autoSetupRemote = true

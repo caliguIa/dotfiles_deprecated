@@ -12,6 +12,7 @@ export PATH="$HOME/.fzf/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/pnpm:$PATH"
 export PATH="$HOME/.jabba/bin:$PATH"
+export PATH="$HOME/build/google-cloud-sdk/bin:$PATH"
 export SHELL='/bin/zsh'
 export GCLOUD_CONFIG_HOME="$HOME/.config/gcloud"
 export PROJECT_ID=panda-development

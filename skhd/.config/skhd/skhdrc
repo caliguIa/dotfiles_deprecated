@@ -1,6 +1,7 @@
 # ctrl - 1 : /usr/bin/open -a "Zed"
 # ctrl - 1 : /usr/bin/open -a "Visual Studio Code"
 ## ctrl - 2 : /usr/bin/open -a "Orion"
+#hyper - s : /usr/bin/open -a "Brave Browser"
 # ctrl - 2 : /usr/bin/open -a "Firefox Developer Edition"
 # ctrl - 1 : /usr/bin/open -a WezTerm
 # ctrl - 2 : /usr/bin/open -a "Brave Browser"
@@ -9,7 +10,7 @@
 # ctrl - 5 : /usr/bin/open -a Mail
 # ctrl - 8 : /usr/bin/open -a Calendar
 hyper - a : /usr/bin/open -a WezTerm
-hyper - s : /usr/bin/open -a "Brave Browser"
+hyper - s : /usr/bin/open -a Arc
 hyper - d : /usr/bin/open -a Slack
 hyper - f : /usr/bin/open -a Spotify
 hyper - q : /usr/bin/open -a Calendar

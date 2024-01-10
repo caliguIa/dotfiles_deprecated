@@ -8,7 +8,7 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 vim.keymap.set(
 	{ "n", "v" },
 	"<leader>fe",
-	"<CMD>NvimTreeToggle<CR>",
+	"<CMD>lua MiniFiles.open()<CR>",
 	{ silent = true, desc = "Toggle [F]ile [E]xplorer" }
 )
 
