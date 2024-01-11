@@ -108,9 +108,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/cal/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cal/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+#if [ -f '/Users/cal/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cal/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/cal/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cal/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+#if [ -f '/Users/cal/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cal/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 timeshell() {
   shell=${1-$SHELL}
@@ -175,15 +175,13 @@ setopt rm_star_silent
 
 
 # fnm
-export PATH="/home/caligula/.local/share/fnm:$PATH"
 eval "`fnm env`"
 eval "$(atuin init zsh)"
-bindkey -e
 [ -s "/home/caligula/.jabba/jabba.sh" ] && source "/home/caligula/.jabba/jabba.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/caligula/google-cloud-sdk/path.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/path.zsh.inc'; fi
+#if [ -f '/home/caligula/google-cloud-sdk/path.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/caligula/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/completion.zsh.inc'; fi
+#if [ -f '/home/caligula/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/caligula/google-cloud-sdk/completion.zsh.inc'; fi
 bindkey -e

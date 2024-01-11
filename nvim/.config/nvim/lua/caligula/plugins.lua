@@ -77,6 +77,10 @@ require("lazy").setup({
 					width_focus = 35,
 					width_nofocus = 8,
 				},
+				mappings = {
+					close = "<Esc>",
+					go_in_plus = "<CR>",
+				},
 			})
 			require("mini.basics").setup({
 				options = {

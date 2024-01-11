@@ -1,5 +1,3 @@
-export PATH="/opt/local/bin:$PATH"
-export PATH="/opt/local/sbin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
@@ -9,10 +7,13 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.fig/bin:$PATH"
 export PATH="$HOME/.fzf/bin:$PATH"
+export PATH="$HOME/.local/share/fnm:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/pnpm:$PATH"
 export PATH="$HOME/.jabba/bin:$PATH"
-export PATH="$HOME/build/google-cloud-sdk/bin:$PATH"
+export BUN_INSTALL="/Users/caligula/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+#export PATH="$HOME/build/google-cloud-sdk/bin:$PATH"
 export SHELL='/bin/zsh'
 export GCLOUD_CONFIG_HOME="$HOME/.config/gcloud"
 export PROJECT_ID=panda-development
@@ -46,10 +47,6 @@ eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 eval "$(atuin init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-## Bun
-export BUN_INSTALL="/Users/caligula/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -s "/Users/caligula/.jabba/jabba.sh" ] && source "/Users/caligula/.jabba/jabba.sh"
 
