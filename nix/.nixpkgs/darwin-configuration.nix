@@ -14,8 +14,10 @@
       colima
       discord
       docker
+      docker-compose-language-service
       dolphin-emu
       du-dust
+      eslint_d
       eza
       fd
       ffmpeg
@@ -38,10 +40,18 @@
       less
       lua
       lua-language-server
+      marksman
       neofetch
       neovim
       ngrok
+      nil
+      nodePackages_latest.bash-language-server
+      nodePackages_latest.typescript-language-server
+      nodePackages_latest.vscode-css-languageserver-bin
+      nodePackages_latest.vscode-html-languageserver-bin
+      nodePackages_latest.vscode-json-languageserver-bin
       nushell
+      prettierd
       python3
       raycast
       ripgrep
@@ -54,7 +64,11 @@
       starship
       stats
       stow
+      stylua
+      tailwindcss-language-server
+      taplo
       terraform
+      terraform-ls
       tmux
       tmuxinator
       tokei
@@ -64,6 +78,7 @@
       wezterm
       wget
       xplr
+      yaml-language-server
       yarn
       zellij
     ];
