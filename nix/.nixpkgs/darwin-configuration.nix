@@ -14,7 +14,6 @@
       colima
       discord
       docker
-      docker-compose-language-service
       dolphin-emu
       du-dust
       eslint_d
@@ -27,7 +26,6 @@
       git
       gitui
       go
-      gopls
       (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.cloud-datastore-emulator])
       grandperspective
       helix
@@ -39,17 +37,9 @@
       keka
       less
       lua
-      lua-language-server
-      marksman
       neofetch
       neovim
       ngrok
-      nil
-      nodePackages_latest.bash-language-server
-      nodePackages_latest.typescript-language-server
-      nodePackages_latest.vscode-css-languageserver-bin
-      nodePackages_latest.vscode-html-languageserver-bin
-      nodePackages_latest.vscode-json-languageserver-bin
       nushell
       prettierd
       python3
@@ -65,10 +55,7 @@
       stats
       stow
       stylua
-      tailwindcss-language-server
-      taplo
       terraform
-      terraform-ls
       tmux
       tmuxinator
       tokei
@@ -78,7 +65,6 @@
       wezterm
       wget
       xplr
-      yaml-language-server
       yarn
       zellij
     ];

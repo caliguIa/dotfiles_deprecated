@@ -55,23 +55,27 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-	gopls = {},
-	rust_analyzer = {},
-	tsserver = {},
-	marksman = {},
-	jsonls = {},
 	bashls = {},
+	cssls = {},
+	dockerls = {},
+	docker_compose_language_service = {},
+	jsonls = {},
+	gopls = {},
 	html = {},
-	tailwindcss = {},
-	taplo = {},
-	terraformls = {},
-	yamlls = {},
 	lua_ls = {
 		Lua = {
 			workspace = { checkThirdParty = false },
 			telemetry = { enable = false },
 		},
 	},
+	marksman = {},
+	nil_ls = {},
+	rust_analyzer = {},
+	tailwindcss = {},
+	taplo = {},
+	terraformls = {},
+	tsserver = {},
+	yamlls = {},
 }
 
 -- Setup neovim lua configuration
